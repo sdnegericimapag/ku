@@ -1,148 +1,81 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SD Negeri Cimapag</title>
-
-  <!-- Style utama -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Icon fontawesome (untuk icon search & hamburger) -->
-  <script src="https://kit.fontawesome.com/4d8d3d2344.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-  <!-- ========== HEADER ========== -->
+  <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
 
-      <!-- Logo + Nama Sekolah -->
-      <a href="#" class="site-logo">
+      <!-- LOGO -->
+      <div class="logo">
         <img src="img/logocimapag.png" alt="Logo Sekolah">
-        SD Negeri Cimapag
-      </a>
+        <div class="logo-text">
+          <h2>SD Negeri Cimapag</h2>
+          <p>Mencetak Generasi Berprestasi</p>
+        </div>
+      </div>
 
-      <!-- Navbar -->
-      <nav class="nav">
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <ul>
 
-        <!-- Toggle Mobile -->
-        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-
-        <ul class="nav-list">
           <li><a href="index.html">Beranda</a></li>
 
-          <!-- Dropdown Profil -->
+          <!-- PROFIL (TIDAK BISA DIKLIK, HANYA DROPDOWN) -->
           <li class="dropdown">
-            <a href="#">Profil ▼</a>
+            <a href="#" class="no-click">Profil</a>
             <ul class="dropdown-menu">
               <li><a href="visi-misi.html">Visi & Misi</a></li>
+              <li><a href="sejarah.html">Sejarah Sekolah</a></li>
               <li><a href="struktur.html">Struktur Organisasi</a></li>
-              <li><a href="guru.html">Data Guru</a></li>
             </ul>
           </li>
 
-          <!-- Dropdown Informasi -->
+          <!-- INFORMASI (TIDAK BISA DIKLIK, HANYA DROPDOWN) -->
           <li class="dropdown">
-            <a href="#">Informasi ▼</a>
+            <a href="#" class="no-click">Informasi</a>
             <ul class="dropdown-menu">
               <li><a href="pengumuman.html">Pengumuman</a></li>
               <li><a href="berita.html">Berita</a></li>
-              <li><a href="sekilas-info.html">Sekilas Info</a></li>
+              <li><a href="agenda.html">Agenda Sekolah</a></li>
             </ul>
           </li>
 
           <li><a href="kontak.html">Kontak</a></li>
+
         </ul>
-
-        <!-- Search icon -->
-        <div class="nav-search">
-          <button><i class="fas fa-search"></i></button>
-          <input type="search" class="visually-hidden" aria-label="Cari di website">
-        </div>
-
       </nav>
     </div>
   </header>
 
-  <!-- ========== HERO / BANNER ========== -->
-  <section class="container">
-    <div class="hero">
-      <div>
-        <h1>Selamat Datang di SD Negeri Cimapag</h1>
-        <p>Sekolah ramah anak, religius, disiplin, berkarakter dan berprestasi.</p>
-      </div>
+  <!-- BANNER -->
+  <section class="banner">
+    <img src="img/bannercimapag.jpg" alt="Banner Sekolah">
+  </section>
 
-      <img src="img/bannercimapag.jpg" alt="Banner SD Negeri Cimapag" class="hero-img">
+  <!-- SECTION DUA KOLOM -->
+  <section class="two-column">
+    <div class="left-text">
+      <h2>Selamat Datang di SD Negeri Cimapag</h2>
+      <p>Kami berkomitmen memberikan pendidikan dasar terbaik bagi putra-putri bangsa.</p>
+    </div>
+
+    <div class="right-text">
+      <h2>Informasi Utama</h2>
+      <p>Dapatkan berbagai informasi terbaru seputar kegiatan dan perkembangan sekolah.</p>
     </div>
   </section>
 
-  <!-- ========== WELCOME SECTION (dua kolom kiri & kanan teks) ========== -->
-  <section class="container welcome-section">
-    <div class="left">
-      <h2>Sambutan Kepala Sekolah</h2>
-      <p>
-        Selamat datang di website resmi SD Negeri Cimapag.  
-        Kami berkomitmen memberikan pendidikan terbaik, lingkungan belajar kondusif, 
-        serta pembentukan karakter yang kuat bagi peserta didik.
-      </p>
-    </div>
-
-    <div class="right">
-      <h2>Informasi Singkat</h2>
-      <p>
-        Website ini menyediakan informasi terbaru seputar kegiatan sekolah, 
-        berita, pengumuman, dan berbagai layanan digital untuk orang tua dan siswa.
-      </p>
-    </div>
-  </section>
-
-  <!-- ========== MAIN LAYOUT 2 KOLOM ========== -->
-  <main class="container layout">
-
-    <!-- Kolom Kiri -->
-    <section class="content">
-      <h2>Berita Terbaru</h2>
-
-      <div class="card mb-2">
-        <h3>Upacara Hari Pahlawan 2025</h3>
-        <p>SD Negeri Cimapag melaksanakan upacara Hari Pahlawan dengan penuh khidmat.</p>
-        <a href="#" class="btn">Baca Selengkapnya</a>
-      </div>
-
-      <div class="card mb-2">
-        <h3>Prestasi Siswa</h3>
-        <p>Siswa SD Negeri Cimapag meraih juara 1 lomba menggambar tingkat kecamatan.</p>
-        <a href="#" class="btn">Baca Selengkapnya</a>
-      </div>
-
-    </section>
-
-    <!-- Kolom Kanan -->
-    <aside class="sidebar">
-      <h2>Sekilas Info</h2>
-      <p>PPDB Tahun 2025 akan dibuka bulan Mei.</p>
-      <p>Kegiatan class meeting akan dimulai minggu depan.</p>
-    </aside>
-
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-
-      <div class="footer-links">
-        <a href="pengumuman.html">Pengumuman</a> |
-        <a href="sekilas-info.html">Sekilas Info</a> |
-        <a href="berita.html">Berita</a>
-      </div>
-
-      <div class="copyright">
-        Copyright ©2025 <span style="color:black;">SD Negeri Cimapag</span>.
-        <span style="color:black;">All rights reserved.</span>
-      </div>
-
-    </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Copyright ©2025 <span class="black">SD Negeri Cimapag</span>. <span class="black">All rights reserved.</span></p>
   </footer>
 
 </body>
