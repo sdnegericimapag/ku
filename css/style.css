@@ -14,7 +14,7 @@
 }
 
 html {
-  font-size: 16px; /* ubah ke 62.5% jika mau rem lebih mudah (10px base) */
+  font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -30,12 +30,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---------- CSS Variables (mudah disesuaikan) ---------- */
+/* ---------- CSS Variables ---------- */
 :root{
-  --brand-500: #0b72b9;      /* primary blue */
+  --brand-500: #0b72b9;
   --brand-400: #1593e0;
-  --accent: #E7F7FF;         /* subtle accent bg */
-  --muted: #6b7280;          /* gray text */
+  --accent: #E7F7FF;
+  --muted: #6b7280;
   --surface: #ffffff;
   --border: #e6eef6;
   --success: #16a34a;
@@ -55,7 +55,7 @@ body {
   padding: 0 1rem;
 }
 
-/* ---------- Top bar / Header ---------- */
+/* ---------- Header ---------- */
 .header {
   background: linear-gradient(180deg, rgba(11,114,185,0.06), rgba(11,114,185,0.02));
   border-bottom: 1px solid var(--border);
@@ -69,7 +69,6 @@ body {
   padding: 0.875rem 0;
 }
 
-/* Logo */
 .site-logo {
   display: flex;
   align-items: center;
@@ -81,7 +80,6 @@ body {
 }
 
 .site-logo img {
-  display: block;
   height: 48px;
   width: auto;
   border-radius: 8px;
@@ -103,7 +101,6 @@ body {
 }
 
 .nav-list a {
-  display: inline-block;
   padding: 0.5rem 0.75rem;
   color: var(--muted);
   text-decoration: none;
@@ -112,15 +109,12 @@ body {
   transition: background .18s, color .18s, transform .12s;
 }
 
-.nav-list a:hover,
-.nav-list a:focus {
+.nav-list a:hover {
   background: rgba(11,114,185,0.06);
   color: var(--brand-500);
-  outline: none;
   transform: translateY(-1px);
 }
 
-/* Mobile menu toggle */
 .menu-toggle {
   display: none;
   background: transparent;
@@ -128,7 +122,7 @@ body {
   font-size: 1.25rem;
 }
 
-/* ---------- Search icon in navbar (icon only) ---------- */
+/* ---------- Search icon ---------- */
 .nav-search {
   position: relative;
   display: inline-flex;
@@ -144,21 +138,14 @@ body {
   font-size: 1.05rem;
 }
 
-.nav-search button:focus {
-  box-shadow: 0 0 0 3px rgba(21,147,224,0.12);
-  outline: none;
-}
-
-/* optional hidden search input for accessibility (visually hidden by default) */
 .visually-hidden {
   position: absolute !important;
   height: 1px; width: 1px;
   overflow: hidden;
   clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
 }
 
-/* ---------- Hero / Banner ---------- */
+/* ---------- Banner / Hero ---------- */
 .hero {
   background: var(--accent);
   border-radius: 14px;
@@ -179,7 +166,6 @@ body {
 
 .hero p { color: var(--muted); }
 
-/* Banner image responsive */
 .hero .hero-img {
   width: 100%;
   height: 160px;
@@ -187,7 +173,7 @@ body {
   border-radius: 10px;
 }
 
-/* ---------- Welcome section (user referenced class) ---------- */
+/* ---------- Welcome section ---------- */
 .welcome-section {
   display: flex;
   gap: 20px;
@@ -199,46 +185,23 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
-.welcome-section .left {
-  flex: 1.35;
-  min-width: 220px;
-}
+.welcome-section .left { flex: 1.35; }
+.welcome-section .right { flex: 0.85; }
 
-.welcome-section .right {
-  flex: 0.85;
-}
-
-/* ---------- Main layout: two-column content ---------- */
+/* ---------- 2 Column Layout ---------- */
 .layout {
   display: grid;
   grid-template-columns: 1fr 320px;
   gap: 1.25rem;
-  align-items: start;
   margin-bottom: 1.5rem;
 }
 
-/* Content primary */
-.content {
+.content,
+.sidebar {
   background: var(--surface);
   padding: 1.25rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-}
-
-/* Sidebar */
-.sidebar {
-  background: var(--surface);
-  padding: 1rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Useful utility: left-section (user referenced) */
-.left-section {
-  padding: 1rem;
-  border-radius: 10px;
-  background: linear-gradient(180deg,#fff,#fbfeff);
   border: 1px solid var(--border);
 }
 
@@ -260,7 +223,11 @@ h1, h2, h3, h4 {
 
 h1 { font-size: 1.5rem; }
 h2 { font-size: 1.125rem; }
-p { color: var(--muted); margin-bottom: 0.75rem; }
+
+p {
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -275,61 +242,49 @@ p { color: var(--muted); margin-bottom: 0.75rem; }
   background: var(--brand-500);
   color: white;
   transition: transform .12s ease, box-shadow .12s ease;
-  box-shadow: var(--shadow-sm);
-  text-decoration: none;
 }
 
-.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
 .btn.secondary {
   background: transparent;
   border: 1px solid var(--border);
   color: var(--muted);
 }
 
-/* ---------- Forms & Inputs ---------- */
-input[type="text"],
-input[type="search"],
-input[type="email"],
-select,
-textarea {
+/* ---------- Inputs & Forms ---------- */
+input, textarea, select {
   width: 100%;
   padding: 0.6rem 0.75rem;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: #fff;
   font-size: 0.95rem;
-  color: #0f1724;
-  transition: box-shadow .12s, border-color .12s;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
+input:focus {
   border-color: var(--brand-400);
   box-shadow: 0 6px 18px rgba(21,147,224,0.06);
 }
 
-/* Form labels */
 .form-row { margin-bottom: 0.85rem; }
-label { display: block; font-weight: 600; margin-bottom: 0.35rem; color: #0b3b56; }
+label { font-weight: 600; margin-bottom: 0.35rem; }
 
 /* ---------- Tables ---------- */
 .table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--surface);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
 }
 
 .table th,
 .table td {
   padding: 0.75rem 0.9rem;
-  text-align: left;
   border-bottom: 1px solid var(--border);
-  color: #0b374f;
 }
 
 .table thead th {
@@ -347,48 +302,41 @@ label { display: block; font-weight: 600; margin-bottom: 0.35rem; color: #0b3b56
 
 .site-footer .footer-inner {
   display: flex;
-  gap: 1.25rem;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
-.copyright {
+copyright {
   color: #374151;
   font-size: 0.95rem;
 }
 
-/* ---------- Small screens (responsive) ---------- */
+/* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
   .layout { grid-template-columns: 1fr; }
-  .header-inner { gap: 0.5rem; }
-  .nav-list { display: none; } /* show mobile menu instead */
+  .nav-list { display: none; }
   .menu-toggle { display: inline-block; }
   .site-logo img { height: 44px; }
-
   .welcome-section {
     flex-direction: column;
     gap: 14px;
   }
-
-  .hero .hero-img { height: 180px; }
 }
 
 @media (max-width: 480px) {
   :root { --container-max: 100%; }
-  .site-logo { font-size: 1rem; }
   .hero { padding: 1rem; }
-  .btn { padding: 0.5rem 0.75rem; font-size: 0.95rem; }
+  .btn { padding: 0.5rem 0.75rem; }
 }
 
-/* ---------- Accessibility helpers ---------- */
-a:focus, button:focus, input:focus, select:focus, textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(21,147,224,0.12);
+/* ---------- Print ---------- */
+@media print {
+  .nav, .menu-toggle, .nav-search, .site-footer { display: none; }
+  .container { max-width: 100%; padding: 0; }
 }
 
-/* ---------- Utility classes ---------- */
+/* ---------- Utilities ---------- */
 .text-center { text-align: center; }
 .mb-1 { margin-bottom: 0.5rem; }
 .mb-2 { margin-bottom: 1rem; }
@@ -398,10 +346,3 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
 .items-center { align-items: center; }
 .justify-between { justify-content: space-between; }
 .rounded { border-radius: 10px; }
-
-/* ---------- Tiny print styles ---------- */
-@media print {
-  .nav, .menu-toggle, .nav-search, .site-footer { display: none; }
-  .container { max-width: 100%; padding: 0; }
-  body { color: #000; background: #fff; }
-}
