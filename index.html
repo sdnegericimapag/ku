@@ -3,90 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Sekolah</title>
+  <title>SD Negeri Cimapag</title>
+
+  <!-- Link CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- Font Awesome untuk icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
   <!-- HEADER -->
-  <header>
-    <h1>Nama Sekolah</h1>
+  <header class="header">
+    <div class="container header-inner">
+
+      <!-- LOGO + NAMA SEKOLAH -->
+      <a href="index.html" class="site-logo">
+        <img src="img/logocimapag.png" alt="Logo SD Negeri Cimapag">
+        SD Negeri Cimapag
+      </a>
+
+      <!-- NAVBAR -->
+      <nav class="nav">
+        <ul class="nav-list">
+
+          <li><a href="index.html">Beranda</a></li>
+
+          <!-- PROFIL DROPDOWN -->
+          <li class="nav-item">
+            <a href="#">Profil ▾</a>
+            <div class="dropdown-menu">
+              <a href="visi.html">Visi & Misi</a>
+              <a href="sejarah.html">Sejarah Sekolah</a>
+              <a href="guru.html">Data Guru</a>
+            </div>
+          </li>
+
+          <!-- AKADEMIK DROPDOWN -->
+          <li class="nav-item">
+            <a href="#">Akademik ▾</a>
+            <div class="dropdown-menu">
+              <a href="ekskul.html">Ekstrakurikuler</a>
+              <a href="jadwal.html">Jadwal Pelajaran</a>
+              <a href="kalender.html">Kalender Akademik</a>
+            </div>
+          </li>
+
+          <li><a href="kontak.html">Kontak</a></li>
+
+        </ul>
+      </nav>
+
+    </div>
   </header>
 
-  <!-- NAVBAR -->
-  <nav>
-    <button id="menu-toggle">☰ Menu</button>
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="profil.html">Profil</a>
-        <ul>
-          <li><a href="visi-misi.html">Visi & Misi</a></li>
-          <li><a href="sejarah.html">Sejarah</a></li>
-        </ul>
-      </li>
-      <li><a href="program.html">Program</a>
-        <ul>
-          <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
-          <li><a href="prestasi.html">Prestasi</a></li>
-        </ul>
-      </li>
-      <li><a href="kontak.html">Kontak</a></li>
-    </ul>
-  </nav>
-
   <!-- BANNER -->
-  <div class="banner">
-    <div class="text-left">Selamat Datang</div>
-    <div class="text-right">Website Sekolah</div>
+  <div class="banner container">
+    <img src="img/bannercimapag.jpg" alt="Banner SD Negeri Cimapag">
   </div>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <h2>Konten Utama</h2>
-    <div class="content">
-      <div class="left">
-        <h3>Kolom Kiri</h3>
-        <p>Ini teks atau artikel di sisi kiri.</p>
-      </div>
-      <div class="right">
-        <h3>Kolom Kanan</h3>
-        <img src="images/banner.jpg" alt="Gambar contoh">
-      </div>
+  <!-- DUA TEKS KIRI KANAN -->
+  <section class="banner-info container">
+    <div class="left-info">
+      <h3>PENGUMUMAN TERBARU</h3>
+      <p>
+        Selamat datang di website resmi SD Negeri Cimapag.  
+        Informasi terbaru mengenai kegiatan sekolah, program belajar, dan pengumuman penting akan ditampilkan di sini.
+      </p>
     </div>
 
-    <h2>Jadwal Pelajaran</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Hari</th>
-          <th>Mata Pelajaran</th>
-          <th>Guru</th>
-          <th>Jam</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Senin</td>
-          <td>Matematika</td>
-          <td>Pak Budi</td>
-          <td>07.00 - 08.30</td>
-        </tr>
-        <tr>
-          <td>Selasa</td>
-          <td>Bahasa Inggris</td>
-          <td>Bu Sari</td>
-          <td>08.30 - 10.00</td>
-        </tr>
-        <tr>
-          <td>Rabu</td>
-          <td>IPA</td>
-          <td>Pak Andi</td>
-          <td>10.00 - 11.30</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="right-info">
+      <h3>AGENDA HARI INI</h3>
+      <p>
+        • Kegiatan belajar mengajar normal  
+        • Persiapan lomba antar sekolah  
+        • Penyusunan laporan bulanan guru  
+      </p>
+    </div>
+  </section>
+
+  <!-- KONTEN UTAMA (OPSIONAL) -->
+  <main class="container layout">
+    <div class="content">
+      <h2>Sambutan Kepala Sekolah</h2>
+      <p>
+        Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa.  
+        Dengan adanya website ini, diharapkan informasi sekolah dapat diakses dengan mudah oleh siswa, orang tua, dan masyarakat.
+      </p>
+    </div>
+
+    <aside class="sidebar">
+      <h3>Info Singkat</h3>
+      <p>Jam Masuk: 07.00 WIB</p>
+      <p>Jam Pulang: 12.00 WIB</p>
+      <p>Lokasi: Cimapag, Indonesia</p>
+    </aside>
   </main>
 
-  <!--
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="#">PENGUMUMAN</a> |
+        <a href="#">SEKILAS INFO</a> |
+        <a href="#">BERITA</a>
+      </div>
+
+      <div class="copyright">
+        Copyright ©2025 <strong>SD Negeri Cimapag</strong>. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
