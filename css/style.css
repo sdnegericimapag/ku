@@ -122,6 +122,12 @@ body {
   font-size: 1.25rem;
 }
 
+/* Membuat menu utama yang punya dropdown tidak bisa diklik */
+.no-click {
+  pointer-events: none;
+  cursor: default;
+}
+
 /* ---------- Search icon ---------- */
 .nav-search {
   position: relative;
@@ -346,3 +352,4 @@ copyright {
 .items-center { align-items: center; }
 .justify-between { justify-content: space-between; }
 .rounded { border-radius: 10px; }
+
