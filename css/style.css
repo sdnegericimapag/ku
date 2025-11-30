@@ -186,6 +186,22 @@ p {
   outline: 1px solid #333;   /* garis outline */
   outline-offset: 5px;       /* jarak antara kotak dan garis */
 }
+/* ==== CONTAINER UTAMA 1 KOLOM ==== */
+.container {
+  max-width: 1100px;      /* lebar ideal desktop */
+  margin: 20px auto;      /* center + jarak atas bawah */
+  padding: 25px;          /* ruang dalam */
+  background: #ffffff;    /* warna latar */
+  border-radius: 10px;    /* sudut halus */
+  outline: 2px solid #e0e0e0;   /* garis luar */
+  outline-offset: 8px;    /* jarak outline */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* efek lembut */
+}
+
+/* Jarak antar elemen dalam container */
+.container > * + * {
+  margin-top: 15px;
+}
 
 
 
@@ -218,6 +234,7 @@ p {
     padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
