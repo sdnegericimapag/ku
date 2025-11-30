@@ -58,6 +58,7 @@ body {
 
 .navbar ul li a:hover {
   background: #B0003B;
+  padding: 15px 15px;      /* tambah tinggi dengan padding atas/bawah */
 }
 
 /* Submenu */
@@ -108,5 +109,6 @@ body {
 .banner p {
   font-size: 16px;
 }
+
 
 
