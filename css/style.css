@@ -13,6 +13,11 @@ body {
   padding-top: 50px; /* Agar konten tidak tertutup navbar fixed */
   background: #FFEFF7;
 }
+
+
+
+
+
 /* ===== NAVBAR ===== */
 .navbar {
   display: flex;
@@ -128,6 +133,7 @@ body {
   padding: 0 40px;        /* jarak kiri-kanan dari tepi halaman */
   max-width: 1200px;      /* biar konten tidak terlalu melebar */
   box-sizing: border-box; /* pastikan padding dihitung dengan benar */
+  outline: 1px solid black;
 }
 
 /* Kolom kiri lebih lebar */
@@ -176,6 +182,7 @@ body {
     padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
