@@ -14,7 +14,7 @@ body {
   background: #FFEFF7;
 }
 
-
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   align-items: center;
@@ -178,6 +178,7 @@ body {
     padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
