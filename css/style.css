@@ -123,3 +123,25 @@ body {
 
 
 
+
+/* style.css */
+
+/* Default (desktop/laptop) */
+.navbar ul li a {
+  font-size: 18px;
+  padding: 12px 20px;
+}
+
+/* Untuk layar kecil (HP) */
+@media (max-width: 768px) {
+  .navbar ul li a {
+    font-size: 14px;   /* font lebih kecil */
+    padding: 10px;     /* padding lebih rapat */
+    display: block;    /* menu jadi vertikal */
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column; /* navbar jadi kolom */
+  }
+}
