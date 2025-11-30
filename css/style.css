@@ -130,7 +130,7 @@ body {
   max-width: 1200px;      /* biar konten tidak terlalu melebar */
   box-sizing: border-box; /* pastikan padding dihitung dengan benar */
   outline: 1px solid black;
-  outline-offset: 10px;      /* jarak outline dari tepi elemen */
+  outline-offset: 5px;      /* jarak outline dari tepi elemen */
 }
 
 /* Kolom kiri lebih lebar */
@@ -179,6 +179,7 @@ body {
     padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
