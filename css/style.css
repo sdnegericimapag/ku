@@ -10,10 +10,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   padding-top: 50px; /* Agar konten tidak tertutup navbar fixed */
-  background: #FFE7F3;
+  background: ##FFEFF7;
 }
-
-
 
 /* ===== NAVBAR ===== */
 .navbar {
@@ -139,6 +137,7 @@ body {
     margin-top: 120px; /* tambah jarak lebih besar di HP */
   }
 }
+
 
 
 
