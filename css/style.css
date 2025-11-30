@@ -12,7 +12,6 @@ body {
   padding-top: 50px; /* Agar konten tidak tertutup navbar fixed */
   background: ##FFEFF7;
 }
-
 /* ===== NAVBAR ===== */
 .navbar {
   display: flex;
@@ -137,6 +136,7 @@ body {
     margin-top: 120px; /* tambah jarak lebih besar di HP */
   }
 }
+
 
 
 
