@@ -86,7 +86,8 @@ body {
 
 /* ===== BANNER ===== */
 .banner {
-  margin-top: 70px; /* jarak dari navbar */
+  margin-top: 10px; /* jarak dari navbar */
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,6 +95,7 @@ body {
   height: 300px;
   padding: 20px;
   color: #fff;
+  
 }
 
 .banner .left-text,
@@ -112,6 +114,7 @@ body {
 .banner p {
   font-size: 16px;
 }
+
 
 
 
