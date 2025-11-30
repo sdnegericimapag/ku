@@ -219,6 +219,63 @@ p {
   margin-top: 15px;
 }
 
+/* ===== TABEL 4 KOLOM CANTIK ===== */
+.table-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px 40px;
+  background: #fdf7fb; /* pink muda lembut */
+  border-radius: 10px;
+  outline: 1px solid #820041;
+  outline-offset: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.table-4col {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Header tabel */
+.table-4col thead th {
+  background: #D00068;      /* warna tema */
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #bb0055;
+}
+
+/* Isi tabel */
+.table-4col tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+/* Strip baris */
+.table-4col tbody tr:nth-child(even) td {
+  background: #f7e8f0;     /* pink muda */
+}
+
+/* Hover */
+.table-4col tbody tr:hover td {
+  background: #ffe3f0;
+  transition: 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
 /* =========================================================
    7. RESPONSIVE (HP)
    ========================================================= */
@@ -242,6 +299,14 @@ p {
   .two-column {
     flex-direction: column;
     padding: 0 20px;
+  }
+}
+.table-4col {
+    font-size: 13px;
+  }
+
+  .table-container {
+    padding: 20px;
   }
 }
 
