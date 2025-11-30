@@ -98,22 +98,27 @@ body {
   max-height: 400px;
   object-fit: cover;
 }
-
-.banner .left-text,
-.banner .right-text {
-  width: 45%;
-  background: rgba(0,0,0,0.5);
-  padding: 15px;
-  border-radius: 5px;
+.banner-text {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  text-shadow:
+    0 6px 9px rgba(255,255,255,0.7),
+    0 0 13px rgba(0,0,0,0.6);
+  color: white;
 }
-
-.banner h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.banner p {
+/* Kiri */
+.banner-text.left {
+  left: 60px;
   font-size: 16px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-style: italic;
+}
+/* Kanan */
+.banner-text.right {
+  right: 60px;
+  font-size: 28px;
+  font-family: 'Mistral', sans-serif;
 }
 
 /* ===== RESPONSIVE (HP) ===== */
@@ -133,6 +138,7 @@ body {
     margin-top: 120px; /* tambah jarak lebih besar di HP */
   }
 }
+
 
 
 
