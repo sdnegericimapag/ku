@@ -205,12 +205,14 @@ p {
 .container {
   max-width: 1200px;
   margin: 20px auto;
-  padding: 20px 40px; 
+  padding: 0px 40px; 
   background: #f0f0f0;
   border-radius: 10px;
   outline: 1px solid #820041;
   outline-offset: 5px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-sizing: border-box;  /* konsisten hitung padding */
+
 }
 
 .container > * + * {
@@ -242,6 +244,7 @@ p {
     padding: 0 20px;
   }
 }
+
 
 
 
