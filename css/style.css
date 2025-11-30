@@ -123,7 +123,10 @@ body {
 .two-column {
   display: flex;
   gap: 20px;            /* jarak antar kolom */
-  margin: 20px 0;
+  margin: 20px auto;      /* jarak atas-bawah + auto center */
+  padding: 0 40px;        /* jarak kiri-kanan dari tepi halaman */
+  max-width: 1200px;      /* biar konten tidak terlalu melebar */
+  box-sizing: border-box; /* pastikan padding dihitung dengan benar */
 }
 
 /* Kolom kiri lebih lebar */
@@ -169,8 +172,10 @@ body {
 @media (max-width: 768px) {
   .two-column {
     flex-direction: column;
+    padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
