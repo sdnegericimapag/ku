@@ -5,13 +5,49 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* ===== GLOBAL FONT SETTINGS ===== */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   padding-top: 70px; /* Agar konten tidak tertutup navbar fixed */
   background: #FFEFF7;
+}
+/* Judul Utama */
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111;                        /* warna teks */
+  margin-bottom: 15px;                /* jarak bawah */
+  line-height: 1.3;                   /* jarak antar baris dalam h1 */
+}
+
+/* Judul Sub */
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 20px;                   /* jarak atas */
+  margin-bottom: 12px;                /* jarak bawah */
+  line-height: 1.35;
+}
+
+/* Judul Kecil */
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Paragraf */
+p {
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 14px;                /* jarak antar paragraf */
+  line-height: 1.7;                   /* jarak antar baris */
 }
 
 /* ===== NAVBAR ===== */
@@ -182,6 +218,7 @@ body {
     padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
