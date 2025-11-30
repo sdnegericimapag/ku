@@ -310,6 +310,85 @@ p {
     border-radius: 10px;
 }
 
+/* FOOTER UTAMA */
+.footer {
+    background: #03A9F4;
+    padding: 40px 30px 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* GRID 3 KOLOM */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* JUDUL */
+.footer-section h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer-line {
+    width: 60px;
+    height: 3px;
+    background: #FFD700;
+    margin: 8px 0 20px;
+    border-radius: 2px;
+}
+
+/* TEKS */
+.footer p {
+    margin: 6px 0;
+    line-height: 1.5;
+    color: #E9F8FF;
+}
+
+/* TAG BOX */
+.tag-list a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.tag-list a:hover {
+    background: #0288D1;
+}
+
+/* SOCIAL ICONS */
+.social-icons img {
+    width: 45px;
+    height: 45px;
+    margin-right: 12px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* BAGIAN COPYRIGHT */
+.footer-bottom {
+    background: #0277BD;
+    margin-top: 40px;
+    padding: 12px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 15px;
+    color: black;
+}
 
 
 
@@ -369,6 +448,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
