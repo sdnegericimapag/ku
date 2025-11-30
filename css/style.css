@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 10px; /* Agar konten tidak tertutup navbar fixed */
+  padding-top: 70px; /* Agar konten tidak tertutup navbar fixed */
 }
 
 /* ===== NAVBAR ===== */
@@ -87,7 +87,7 @@ body {
 
 /* ===== BANNER ===== */
 .banner {
-  margin-top: 20px; /* jarak lebih besar karena navbar fixed */
+ /* margin-top: 20px; /* jarak lebih besar karena navbar fixed */
   position: relative;
 }
 
@@ -131,6 +131,7 @@ body {
     margin-top: 120px; /* tambah jarak lebih besar di HP */
   }
 }
+
 
 
 
