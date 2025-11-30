@@ -148,6 +148,17 @@ body {
   padding: 15px;
   border-radius: 5px;
 }
+/* ===== COUNTAINER SATU KOLOM ===== */
+.two-column {
+  display: block;
+  gap: 20px;            /* jarak antar kolom */
+  margin: 20px auto;      /* jarak atas-bawah + auto center */
+  padding: 0 40px;        /* jarak kiri-kanan dari tepi halaman */
+  max-width: 1200px;      /* biar konten tidak terlalu melebar */
+  box-sizing: border-box; /* pastikan padding dihitung dengan benar */
+  outline: 1px solid black;
+  outline-offset: 5px;      /* jarak outline dari tepi elemen */
+}
 
 
 
@@ -179,6 +190,7 @@ body {
     padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
