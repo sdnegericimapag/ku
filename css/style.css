@@ -1,4 +1,4 @@
-/* Reset dasar */
+/* ===== RESET DASAR ===== */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #D00068; /* Warna Merah  muda tua tua */
+  background: #D00068; /* Merah muda tua */
   padding: 10px 20px;
   position: fixed;
   top: 0;
@@ -42,8 +42,7 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
-  font-size: 14px;   /* ubah sesuai kebutuhan, misalnya 14px, 18px, dll */
-  font-family: Arial, sans-serif; /* opsional, untuk jenis font */
+  font-family: Arial, sans-serif;
 }
 
 .navbar ul li {
@@ -53,18 +52,18 @@ body {
 .navbar ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 15px;
+  font-size: 18px;        /* ukuran font default menu */
+  padding: 12px 20px;     /* padding default */
   display: inline-block;
-  transition: all 0.3s ease; /* biar animasi halus */
+  transition: all 0.3s ease;
 }
 
 .navbar ul li a:hover {
   background: #B0003B;
-  padding: 5px 5px;      /* tambah tinggi dengan padding atas/bawah */
   color: yellow;
 }
 
-/* Submenu */
+/* ===== SUBMENU ===== */
 .navbar ul li ul {
   position: absolute;
   top: 100%;
@@ -86,9 +85,10 @@ body {
 
 /* ===== BANNER ===== */
 .banner {
-  margin-top: 10px; /* jarak dari navbar */
+  margin-top: 70px; /* jarak lebih besar karena navbar fixed */
   position: relative;
 }
+
 .banner img {
   width: 100%;
   max-height: 400px;
@@ -112,36 +112,20 @@ body {
   font-size: 16px;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* style.css */
-
-/* Default (desktop/laptop) */
-.navbar ul li a {
-  font-size: 18px;
-  padding: 12px 20px;
-}
-
-/* Untuk layar kecil (HP) */
+/* ===== RESPONSIVE (HP) ===== */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
   .navbar ul li a {
-    font-size: 14px;   /* font lebih kecil */
-    padding: 10px;     /* padding lebih rapat */
-    display: block;    /* menu jadi vertikal */
+    font-size: 14px;   /* font lebih kecil di HP */
+    padding: 10px;
+    display: block;
     text-align: center;
   }
 
-  .navbar {
-    flex-direction: column; /* navbar jadi kolom */
+  .banner {
+    margin-top: 120px; /* tambah jarak lebih besar di HP */
   }
 }
-
-
