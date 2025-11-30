@@ -8,23 +8,23 @@
   <!-- CSS utama -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-    <style>
+    
+  <style>
+.image-text {
+  display: flex;
+  align-items: flex-start;   /* teks sejajar di atas */
+  gap: 1rem;
+}
 
-  .konten-dengan-gambar {
-    display: flex;
-    align-items: center;     /* gambar sejajar atas */
-    gap: 20px;                   /* jarak gambar & teks */
-    margin-bottom: 20px;
-  }
+.image-text img {
+  width: 150px;      /* ukuran default */
+  max-width: 100%;   /* gambar ikut mengecil bila ruang sempit */
+  height: auto;
+}
 
-  .konten-dengan-gambar img {
-    width: 150px;                /* bisa diubah */
-    height: auto;
-    flex-shrink: 0; /* gambar tidak mengecil */
-  }
-
-  .image-text .text {
-  flex: 1; /* teks mengambil sisa ruang di kanan */
+.image-text .text {
+  flex: 1;
+}
 
 </style>
 
@@ -84,6 +84,7 @@
     <p>Ini area konten tambahan yang lebih sempit anama saya dinda umur 21 tahun saya mengajar di sd negeri cimapag sudah 5 tahun sampai dengan ahri ini tapi say abelum mendapat.</p>
   </div>
 </section>
+
 
 
 
