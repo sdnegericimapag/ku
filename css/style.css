@@ -10,7 +10,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 50px; /* Agar konten tidak tertutup navbar fixed */
+  padding-top: 70px; /* Agar konten tidak tertutup navbar fixed */
   background: #FFEFF7;
 }
 
@@ -129,8 +129,6 @@ body {
   padding: 0 40px;        /* jarak kiri-kanan dari tepi halaman */
   max-width: 1200px;      /* biar konten tidak terlalu melebar */
   box-sizing: border-box; /* pastikan padding dihitung dengan benar */
-  outline: 1px solid black;
-  outline-offset: 5px;      /* jarak outline dari tepi elemen */
 }
 
 /* Kolom kiri lebih lebar */
@@ -148,17 +146,7 @@ body {
   padding: 15px;
   border-radius: 5px;
 }
-/* ===== COUNTAINER SATU KOLOM ===== */
-.two-column {
-  display: block;
-  gap: 20px;            /* jarak antar kolom */
-  margin: 20px auto;      /* jarak atas-bawah + auto center */
-  padding: 0 40px;        /* jarak kiri-kanan dari tepi halaman */
-  max-width: 1200px;      /* biar konten tidak terlalu melebar */
-  box-sizing: border-box; /* pastikan padding dihitung dengan benar */
-  outline: 1px solid black;
-  outline-offset: 5px;      /* jarak outline dari tepi elemen */
-}
+
 
 
 
@@ -190,6 +178,7 @@ body {
     padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
