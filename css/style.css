@@ -42,6 +42,8 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
+  font-size: 14px;   /* ubah sesuai kebutuhan, misalnya 14px, 18px, dll */
+  font-family: Arial, sans-serif; /* opsional, untuk jenis font */
 }
 
 .navbar ul li {
@@ -54,8 +56,6 @@ body {
   padding: 10px 15px;
   display: inline-block;
   transition: all 0.3s ease; /* biar animasi halus */
-  font-size: 14px;   /* ubah sesuai kebutuhan, misalnya 14px, 18px, dll */
-  font-family: Arial, sans-serif; /* opsional, untuk jenis font */
 }
 
 .navbar ul li a:hover {
@@ -143,4 +143,5 @@ body {
     flex-direction: column; /* navbar jadi kolom */
   }
 }
+
 
