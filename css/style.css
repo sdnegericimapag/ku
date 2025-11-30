@@ -88,14 +88,11 @@ body {
 .banner {
   margin-top: 10px; /* jarak dari navbar */
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: url('img/bannercimapag.jpg') no-repeat center center/cover;
-  height: 300px;
-  padding: 20px;
-  color: #fff;
-  
+}
+.banner img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 .banner .left-text,
@@ -114,6 +111,7 @@ body {
 .banner p {
   font-size: 16px;
 }
+
 
 
 
@@ -145,3 +143,4 @@ body {
     flex-direction: column; /* navbar jadi kolom */
   }
 }
+
