@@ -119,6 +119,34 @@ body {
   font-family: 'Mistral', sans-serif;
 }
 
+/* ===== COUNTAINER DUA KOLOM ===== */
+.two-column {
+  display: flex;
+  gap: 20px;            /* jarak antar kolom */
+  margin: 20px 0;
+}
+
+/* Kolom kiri lebih lebar */
+.left-content {
+  flex: 2;              /* proporsi lebih besar */
+  background: #f0f0f0;  /* contoh styling */
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Kolom kanan lebih sempit */
+.right-content {
+  flex: 1;              /* proporsi lebih kecil */
+  background: #e0e0e0;  /* contoh styling */
+  padding: 15px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
 /* ===== RESPONSIVE (HP) ===== */
 @media (max-width: 768px) {
   .navbar {
@@ -136,6 +164,14 @@ body {
     margin-top: 120px; /* tambah jarak lebih besar di HP */
   }
 }
+
+/* Responsif: jika layar kecil, kolom jadi vertikal */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+  }
+}
+
 
 
 
