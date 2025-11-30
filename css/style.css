@@ -15,7 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #004080; /* warna biru tua */
+  background: #D00068; /* Warna Merah  muda tua tua */
   padding: 10px 20px;
   position: fixed;
   top: 0;
@@ -108,3 +108,4 @@ body {
 .banner p {
   font-size: 16px;
 }
+
