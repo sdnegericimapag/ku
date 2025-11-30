@@ -57,7 +57,7 @@ body {
 }
 
 .navbar ul li a:hover {
-  background: #0066cc;
+  background: #B0003B;
 }
 
 /* Submenu */
@@ -108,4 +108,5 @@ body {
 .banner p {
   font-size: 16px;
 }
+
 
