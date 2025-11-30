@@ -18,7 +18,7 @@ h1 {
   font-size: 22px;
   font-weight: bold;
   color: #111;                        /* warna teks */
-  margin-bottom: 15px;                /* jarak bawah */
+  margin-bottom: 5px;                /* jarak bawah */
   line-height: 1;                   /* jarak antar baris dalam h1 */
 }
 
@@ -27,8 +27,8 @@ h2 {
   font-size: 18px;
   font-weight: bold;
   color: #222;
-  margin-top: 20px;                   /* jarak atas */
-  margin-bottom: 12px;                /* jarak bawah */
+  margin-top: 5px;                   /* jarak atas */
+  margin-bottom: 5px;                /* jarak bawah */
   line-height: 1;
 }
 
@@ -37,17 +37,17 @@ h3 {
   font-size: 16px;
   font-weight: bold;
   color: #333;
-  margin-top: 18px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   line-height: 1;
 }
 
 /* Paragraf */
 p {
-  font-size: 12px;
+  font-size: 14px;
   color: #444;
   margin-bottom: 14px;                /* jarak antar paragraf */
-  line-height: 1.2;                   /* jarak antar baris */
+  line-height: 1;                   /* jarak antar baris */
 }
 
 /* ===== NAVBAR ===== */
@@ -218,6 +218,7 @@ p {
     padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
