@@ -180,7 +180,7 @@ p {
 /* Kolom kanan lebih sempit */
 .right-content {
   flex: 1;              /* proporsi lebih kecil */
-  background: #e0e0e0;  /* contoh styling */
+  background: white;  /* contoh styling */
   padding: 15px;
   border-radius: 5px;
   outline: 1px solid #333;   /* garis outline */
@@ -218,6 +218,7 @@ p {
     padding: 0 20px; /* lebih kecil di layar HP */
   }
 }
+
 
 
 
