@@ -15,7 +15,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   padding-top: 70px; /* Agar konten tidak tertutup navbar fixed */
-  background: #FFEFF7;
+  background: #EBFAFF;
 }
 
 /* Judul Utama */
@@ -474,6 +474,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
