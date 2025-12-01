@@ -326,7 +326,9 @@ p {
   padding: 40px 20px 20px;
 }
 
+.footer-container,
 .footer-container {
+  color: white !important;
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -395,6 +397,13 @@ p {
   padding: 15px;
   font-size: 12px;
   font-style: italic;
+  color: black !important;
+}
+
+/* SD Negeri Cimapag khusus putih */
+.footer-bottom .footer-school {
+  color: white !important;
+  font-weight: bold;
 }
 
 .school-red {
@@ -480,6 +489,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
