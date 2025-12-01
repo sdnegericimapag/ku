@@ -322,7 +322,7 @@ p {
 
 .footer {
   background-color: #00B0F0; /* Biru langit terang */
-  color: white;
+  color: white !important;
   padding: 40px 20px 20px;
 }
 
@@ -355,7 +355,7 @@ p {
 .footer-column h3::after {
   content: "";
   display: block;
-  width: 180px;
+  width: 160px;
   height: 2px;
   background: linear-gradient(to right, white 0%, #e6c200 100%);
   margin-top: 5px;
@@ -492,6 +492,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
