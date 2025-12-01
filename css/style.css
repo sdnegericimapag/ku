@@ -340,6 +340,7 @@ p {
 .footer-column {
   flex: 1;
   min-width: 250px;
+  color: white !important;
 }
 
 .footer-column h3 {
@@ -353,8 +354,8 @@ p {
 .footer-column h3::after {
   content: "";
   display: block;
-  width: 120px;
-  height: 3px;
+  width: 140px;
+  height: 2px;
   background: linear-gradient(to right, white 0%, #e6c200 100%);
   margin-top: 5px;
 }
@@ -489,6 +490,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
