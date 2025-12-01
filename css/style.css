@@ -185,8 +185,9 @@ p {
   background: #f0f0f0;
   padding: 15px;
   border-radius: 5px;
-  outline: 1px solid #820041;
-  outline-offset: 5px;
+  /*outline: 1px solid #820041;*/
+  /*outline-offset: 5px;*/
+   border: 2px solid #bde6f5;
 }
 
 /* Kolom kanan */
@@ -474,6 +475,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
