@@ -188,6 +188,7 @@ p {
   /*outline: 1px solid #820041;*/
   /*outline-offset: 5px;*/
    border: 2px solid #bde6f5;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 /* Kolom kanan */
@@ -195,9 +196,11 @@ p {
   flex: 1;
   background: white;
   padding: 15px;
-  border-radius: 5px;
-  outline: 1px solid #820041;
-  outline-offset: 5px;
+  border-radius: 10px;
+  /*outline: 1px solid #820041;*/
+  /*outline-offset: 5px;*/
+   border: 2px solid #bde6f5;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 /* =========================================================
@@ -475,6 +478,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
