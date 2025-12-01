@@ -322,7 +322,7 @@ p {
 .custom-footer {
   background-color: #00AEEF;      /* Warna biru utama */
   color: white;
-  padding: 40px 20px;
+  padding: 20px 20px;
   font-family: Arial, sans-serif; /* Ubah font di sini */
 }
 
@@ -411,15 +411,12 @@ p {
   margin-top: 35px;
   background-color: #00688B; /* warna strip bawah */
   text-align: center;
-  padding: 15px;
+  padding: 8px 0;
   font-size: 14px;
   font-style: italic;
   color: black;              /* default: hitam */
 }
 
-.footer-bottom {
-margin-bottom: 10px; /* bisa 30px, 40px, terserah */
-}
 
 /* SD NegerI Cimapag putih */
 .custom-footer .footer-bottom .footer-school {
@@ -478,6 +475,7 @@ margin-bottom: 10px; /* bisa 30px, 40px, terserah */
         height: 1100px;
     }
 }
+
 
 
 
