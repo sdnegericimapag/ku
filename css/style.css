@@ -348,13 +348,14 @@ p {
   font-size: 20px;
   position: relative;
   padding-bottom: 6px;
+ font-color: white !important;
 }
 
 /* Garis judul putih → kuning */
 .footer-column h3::after {
   content: "";
   display: block;
-  width: 140px;
+  width: 180px;
   height: 2px;
   background: linear-gradient(to right, white 0%, #e6c200 100%);
   margin-top: 5px;
@@ -429,6 +430,7 @@ p {
 .footer-location {
   display: grid;
   grid-template-columns: 18px auto;
+   color: white !important;
 }
 
 /* Baris kedua masuk ke dalam, tidak sejajar ikon */
@@ -490,6 +492,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
