@@ -26,6 +26,114 @@
     .image-text .text {
       flex: 1;
     }
+    /* ===========================
+   FOOTER KHUSUS HALAMAN INI
+   =========================== */
+
+.custom-footer {
+  background-color: #00AEEF;      /* Warna biru utama */
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif; /* Ubah font di sini */
+}
+
+/* Container kolom */
+.custom-footer .footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Kolom */
+.custom-footer .footer-column {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* Judul Kolom */
+.custom-footer .footer-column h3 {
+  font-size: 22px;                /* ukuran judul */
+  margin-bottom: 12px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Garis bawah judul */
+.custom-footer .footer-column h3::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(to right, white, #FFD700);
+  margin-top: 5px;
+}
+
+/* Isi kolom */
+.custom-footer p, 
+.custom-footer span {
+  color: white;                   /* semua kolom putih */
+  font-size: 16px;                /* ukuran teks */
+}
+
+/* Ikon */
+.custom-footer i {
+  margin-right: 8px;
+}
+
+/* Lokasi */
+.custom-footer .footer-location {
+  display: grid;
+  grid-template-columns: 18px auto;
+  margin: 6px 0;
+}
+
+.custom-footer .footer-address {
+  margin-top: 2px;
+}
+
+/* TAGS */
+.custom-footer .tags span {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 6px 12px;
+  margin: 5px 5px 0 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.custom-footer .tags span:hover {
+  color: #FFD700;
+  border-color: #FFD700;
+}
+
+/* SOSIAL MEDIA ICON */
+.custom-footer .social-icons a img {
+  width: 35px;   /* ubah ukuran icon */
+  height: 35px;
+  margin-right: 10px;
+}
+
+/* COPYRIGHT */
+.custom-footer .footer-bottom {
+  margin-top: 35px;
+  background-color: #00688B; /* warna strip bawah */
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  font-style: italic;
+  color: black;              /* default: hitam */
+}
+
+/* SD NegerI Cimapag putih */
+.custom-footer .footer-bottom .footer-school {
+  color: white;
+  font-weight: bold;
+}
+
   </style>
 </head>
 
@@ -80,5 +188,58 @@
     <div class="banner-text right">Logo</div>
   </div>
 
+  <footer class="custom-footer">
+
+  <div class="footer-container">
+    
+    <!-- KOLOM 1 -->
+    <div class="footer-column">
+      <h3>Hubungi Kami</h3>
+      <p><strong>SD Negeri Cimapag</strong></p>
+
+      <div class="footer-location">
+        <i class="fa-solid fa-location-dot"></i>
+        <span class="footer-address">
+          Alamat: Jln. Cireunghas Kp. Nagrog RT 03/07 Desa/Kec. Cireunghas – Sukabumi 43193
+        </span>
+      </div>
+
+      <p><i class="fa-solid fa-phone"></i> Telepon: -</p>
+      <p><i class="fa-solid fa-envelope"></i> Email: sdncimapag37@gmail.com</p>
+    </div>
+
+    <!-- KOLOM 2 -->
+    <div class="footer-column">
+      <h3>Tags</h3>
+      <div class="tags">
+        <a href="#"><span>PENGUMUMAN</span></a>
+        <a href="#"><span>SEKILAS INFO</span></a>
+        <a href="#"><span>BERITA</span></a>
+      </div>
+    </div>
+
+    <!-- KOLOM 3 -->
+    <div class="footer-column">
+      <h3>Ikuti Kami</h3>
+      <div class="social-icons">
+        <a href="#"><img src="img/fb.png" alt="Facebook"></a>
+        <a href="#"><img src="img/ig.png" alt="Instagram"></a>
+        <a href="#"><img src="img/yt.png" alt="YouTube"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    Copyright ©2025 
+    <span class="footer-school">SD Negeri Cimapag</span>
+    <span>All rights reserved.</span>
+  </div>
+
+</footer>
+
+
 </body>
 </html>
+
