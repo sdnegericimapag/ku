@@ -319,127 +319,113 @@ p {
 /* ========================== */
 /*          FOOTER            */
 /* ========================== */
-
-.footer {
-  background-color: #00B0F0; /* Biru langit terang */
-  color: white !important;
-  padding: 40px 20px 20px;
+.custom-footer {
+  background-color: #00AEEF;      /* Warna biru utama */
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif; /* Ubah font di sini */
 }
 
-.footer-container,
-.footer-container {
-  color: white !important;
+/* Container kolom */
+.custom-footer .footer-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
 }
 
-.footer-column {
+/* Kolom */
+.custom-footer .footer-column {
   flex: 1;
-  min-width: 250px;
-  color: white !important;
+  min-width: 260px;
 }
 
-.footer-column h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
+/* Judul Kolom */
+.custom-footer .footer-column h3 {
+  font-size: 16px;                /* ukuran judul */
+  margin-bottom: 12px;
   position: relative;
-  padding-bottom: 6px;
- font-color: white !important;
+  padding-bottom: 5px;
 }
 
-/* Garis judul putih → kuning */
-.footer-column h3::after {
+/* Garis bawah judul */
+.custom-footer .footer-column h3::after {
   content: "";
   display: block;
-  width: 160px;
+  width: 150px;
   height: 2px;
-  background: linear-gradient(to right, white 0%, #e6c200 100%);
+  background: linear-gradient(to right, white, #FFD700);
   margin-top: 5px;
 }
 
-.footer-column p {
-  font-size: 13px;
+/* Isi kolom */
+.custom-footer p, 
+.custom-footer span {
+  color: white;                   /* semua kolom putih */
+  font-size: 13px;                /* ukuran teks */
+}
+
+/* Ikon */
+.custom-footer i {
+  margin-right: 8px;
+}
+
+/* Lokasi */
+.custom-footer .footer-location {
+  display: grid;
+  grid-template-columns: 18px auto;
   margin: 6px 0;
 }
 
-.footer-column i {
-  margin-right: 7px;
+.custom-footer .footer-address {
+  margin-top: 2px;
 }
 
-/* TAG BOX */
-.tags span {
+/* TAGS */
+.custom-footer .tags span {
   display: inline-block;
   border: 1px solid white;
-  padding: 5px 10px;
+  padding: 6px 12px;
   margin: 5px 5px 0 0;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
-}
-
-.social-icons a {
-  text-decoration: none;
-  margin-right: 10px;
-  display: inline-block;
-}
-
-.social-icons a img {
-  width: 28px;   /* sesuaikan ukuran icon */
-  height: 28px;
-  object-fit: contain;
-}
-/* COPYRIGHT BAR */
-.footer-bottom {
-  margin-top: 25px;
-  background-color: #00759E; /* hijau terang seperti contoh */
-  text-align: center;
-  padding: 15px;
-  font-size: 12px;
-  font-style: italic;
-  color: black !important;
-}
-
-/* SD Negeri Cimapag khusus putih */
-.footer-bottom .footer-school {
-  color: white !important;
-  font-weight: bold;
-}
-
-.school-red {
-  color: red;
-  font-weight: bold;
-}
-.tags a span {
-  color: white;              /* warna awal */
   transition: 0.3s;
 }
 
-.tags a:hover span {
-  color: #FFD500;            /* warna saat hover */
+.custom-footer .tags span:hover {
+  color: #FFD700;
+  border-color: #FFD700;
 }
 
-/* Perataan alamat agar baris kedua sejajar dengan teks di baris pertama */
-.footer-location {
-  display: flex;
-  align-items: flex-start;
+/* SOSIAL MEDIA ICON */
+.custom-footer .social-icons a img {
+  width: 35px;   /* ubah ukuran icon */
+  height: 35px;
+  margin-right: 10px;
 }
 
-.footer-location {
-  display: grid;
-  grid-template-columns: 18px auto;
-   color: white !important;
+/* COPYRIGHT */
+.custom-footer .footer-bottom {
+  margin-top: 35px;
+  background-color: #00688B; /* warna strip bawah */
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  font-style: italic;
+  color: black;              /* default: hitam */
 }
 
-/* Baris kedua masuk ke dalam, tidak sejajar ikon */
-.footer-address {
-  display: block;
-  padding-left: 0px; /* sesuaikan, ini sudah pas untuk teks yang kamu pakai */
-  margin-top: 3px;
+.footer-bottom {
+margin-bottom: 10px; /* bisa 30px, 40px, terserah */
 }
 
+/* SD NegerI Cimapag putih */
+.custom-footer .footer-bottom .footer-school {
+  color: white;
+  font-weight: bold;
+}
 
 
 
@@ -492,6 +478,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
