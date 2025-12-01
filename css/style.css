@@ -406,6 +406,25 @@ p {
   margin-right: 10px;
 }
 
+/* Hapus garis bawah pada semua link di footer */
+.custom-footer a {
+  text-decoration: none !important;
+}
+
+/* Khusus social icon biar bersih */
+.custom-footer .social-icons a {
+  text-decoration: none !important;
+  border: none;
+  outline: none;
+}
+
+.custom-footer .social-icons img {
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+
 /* COPYRIGHT */
 .custom-footer .footer-bottom {
   margin-top: 35px;
@@ -475,6 +494,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
