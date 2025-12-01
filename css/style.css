@@ -212,10 +212,11 @@ p {
   padding: 20px; 
   background: #f0f0f0;
   border-radius: 10px;
-  outline: 1px solid #820041;
-  outline-offset: 5px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  /*outline: 1px solid #820041;*/
+  /*outline-offset: 5px;*/
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   box-sizing: border-box;  /* konsisten hitung padding */
+  border: 2px solid #bde6f5;
 
 }
 
@@ -230,10 +231,11 @@ p {
   padding: 20px 40px;
   background: #fdf7fb; /* pink muda lembut */
   border-radius: 10px;
-  outline: 1px solid #820041;
-  outline-offset: 5px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  /*outline: 1px solid #820041;*/
+  /*outline-offset: 5px;*/
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   box-sizing: border-box;
+  border: 2px solid #bde6f5;
 }
 
 .table-4col {
@@ -478,6 +480,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
