@@ -310,6 +310,118 @@ p {
     border-radius: 10px;
 }
 
+/* ========================== */
+/*          FOOTER            */
+/* ========================== */
+
+.footer {
+  background-color: #00B0F0; /* Biru langit terang */
+  color: white;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+/* Garis judul putih → kuning */
+.footer-column h3::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(to right, white 0%, #e6c200 100%);
+  margin-top: 5px;
+}
+
+.footer-column p {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+.footer-column i {
+  margin-right: 7px;
+}
+
+/* TAG BOX */
+.tags span {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.social-icons a {
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social-icons a img {
+  width: 28px;   /* sesuaikan ukuran icon */
+  height: 28px;
+  object-fit: contain;
+}
+/* COPYRIGHT BAR */
+.footer-bottom {
+  margin-top: 25px;
+  background-color: #00759E; /* hijau terang seperti contoh */
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.school-red {
+  color: red;
+  font-weight: bold;
+}
+.tags a span {
+  color: white;              /* warna awal */
+  transition: 0.3s;
+}
+
+.tags a:hover span {
+  color: #FFD500;            /* warna saat hover */
+}
+
+/* Perataan alamat agar baris kedua sejajar dengan teks di baris pertama */
+.footer-location {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-location {
+  display: grid;
+  grid-template-columns: 18px auto;
+}
+
+/* Baris kedua masuk ke dalam, tidak sejajar ikon */
+.footer-address {
+  display: block;
+  padding-left: 0px; /* sesuaikan, ini sudah pas untuk teks yang kamu pakai */
+  margin-top: 3px;
+}
+
 
 
 
@@ -362,6 +474,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
