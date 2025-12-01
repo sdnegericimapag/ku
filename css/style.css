@@ -62,7 +62,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #D00068;
+  background: #00B0F0;
   padding: 10px 20px;
   position: fixed;
   top: 0;
@@ -474,6 +474,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
