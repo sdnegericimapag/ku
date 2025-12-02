@@ -500,9 +500,17 @@ p {
 .artikel-img {
   width: 180px;
   height: 120px;
-  border-radius: 10px;
+  border-radius: 12px;
   object-fit: cover;
+   margin-bottom: 20px;
+   display: block;
 }
+* supaya gambar tidak menempel di kiri */
+.artikel-image-wrapper {
+  padding: 10px;              /* jarak dalam */
+  background: #f6f6f6;        /* warna lembut */
+  border-radius: 12px;
+  margin-bottom: 20px;
 
 .artikel-body {
   flex: 1;
@@ -544,7 +552,7 @@ p {
 .artikel-full {
   padding: 20px;
   background: #fdfdfd;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #ddd;
   line-height: 1.7;
 }
@@ -707,6 +715,7 @@ p {
     height: 200px;
   }
 }
+
 
 
 
