@@ -502,10 +502,10 @@ p {
   height: 120px;
   border-radius: 12px;
   object-fit: cover;
-   margin-bottom: 20px;
+   margin-bottom: 20px;   /* jarak gambar ke teks */
    display: block;
 }
-* supaya gambar tidak menempel di kiri */
+/* supaya gambar tidak menempel di kiri */
 .artikel-image-wrapper {
   padding: 10px;              /* jarak dalam */
   background: #f6f6f6;        /* warna lembut */
@@ -715,6 +715,7 @@ p {
     height: 200px;
   }
 }
+
 
 
 
