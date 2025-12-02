@@ -2,82 +2,68 @@ const username = "sdnegericimapag";
 const repo = "ku";
 const folder = "artikel";
 
-const listContainer = document.getElementById("daftar-artikel");
-const articleView = document.getElementById("artikel-view");
+const listElement = document.getElementById("artikel-list");
+const viewElement = document.getElementById("artikel-view");
 
-// =====================================
-// TAMPILKAN DAFTAR ARTIKEL
-// =====================================
+// ============================
+// TAMPILKAN LIST ARTIKEL
+// ============================
 function loadArticleList() {
-  articleView.style.display = "none";
-  listContainer.style.display = "block";
+
+  listElement.style.display = "block";
+  viewElement.style.display = "none";
 
   fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`)
     .then(res => res.json())
     .then(files => {
 
-      const artikelFiles = files.filter(f => f.name.endsWith(".html"));
-      artikelFiles.sort((a, b) => b.name.localeCompare(a.name));
+      const htmlFiles = files.filter(f => f.name.endsWith(".html"));
+      htmlFiles.sort((a, b) => b.name.localeCompare(a.name));
 
-      listContainer.innerHTML = "";
+      listElement.innerHTML = "";
 
-      artikelFiles.forEach(file => {
+      htmlFiles.forEach(file => {
         const namaFile = file.name.replace(".html", "");
-        const judul = namaFile.substring(11).replace(/-/g, " ");
         const tanggal = namaFile.substring(0, 10);
+        const judul = namaFile.substring(11).replace(/-/g, " ");
 
-        // --- cari gambar ---
-        const baseName = file.name.replace(".html", "");
-        const gambarJpg = files.find(f => f.name === `${baseName}.jpg`);
-        const gambarPng = files.find(f => f.name === `${baseName}.png`);
+        const thumbName = namaFile + ".jpg";
 
-        let gambar = "img/no-image.jpg";
+        const snippet = "Klik untuk membaca isi artikel lengkap...";
 
-        if (gambarJpg) {
-          gambar = `https://raw.githubusercontent.com/${username}/${repo}/main/${folder}/${gambarJpg.name}`;
-        } else if (gambarPng) {
-          gambar = `https://raw.githubusercontent.com/${username}/${repo}/main/${folder}/${gambarPng.name}`;
-        }
-
-        // CARD
-        listContainer.innerHTML += `
+        listElement.innerHTML += `
           <div class="artikel-card">
-            <div class="artikel-row">
-
-              <div class="artikel-image-wrapper">
-                <img src="${gambar}" alt="${judul}" class="artikel-img" onerror="this.style.display='none'">
-              </div>
-
-              <div class="artikel-body">
-                <h3>${judul}</h3>
-                <div class="tanggal">${tanggal}</div>
-                <button class="btn-baca" onclick="loadArticle('${file.path}')">Baca Artikel</button>
-              </div>
-
+            <img class="artikel-thumb" src="artikel/thumb/${thumbName}" alt="">
+            <div class="artikel-info">
+              <div class="artikel-title">${judul}</div>
+              <div class="artikel-date">${tanggal}</div>
+              <div class="artikel-snippet">${snippet}</div>
+              <a href="#" class="artikel-more"
+                 onclick="loadArticle('${file.path}')">Selengkapnya →</a>
             </div>
           </div>
         `;
       });
+
     });
+
 }
 
-// =====================================
-// BACA ARTIKEL DALAM HALAMAN
-// =====================================
+// ============================
+// BACA ARTIKEL PENUH
+// ============================
 function loadArticle(path) {
+
   fetch(`https://raw.githubusercontent.com/${username}/${repo}/main/${path}`)
     .then(res => res.text())
     .then(html => {
-      listContainer.style.display = "none";
-      articleView.style.display = "block";
 
-      articleView.innerHTML = `
-        <div class="artikel-full">
-          ${html}
-          <br><br>
-          <button class="btn-kembali" onclick="loadArticleList()">⬅ Kembali ke Berita</button>
-        </div>
-      `;
+      listElement.style.display = "none";
+      viewElement.style.display = "block";
+
+      viewElement.innerHTML = html +
+        `<br><a href="#" onclick="loadArticleList()" 
+         style="font-weight:bold;color:#0077cc">← Kembali</a>`;
     });
 }
 
