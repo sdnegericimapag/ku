@@ -1,41 +1,58 @@
-// Folder tempat artikel disimpan
-const folder = 'artikel/';
+const username = "sdnegericimapag";
+const repo = "ku";
+const folder = "artikel";
 
-// Tempat menampilkan artikel
-const container = document.getElementById('daftar-artikel');
+const listContainer = document.getElementById("daftar-artikel");
+const articleView = document.getElementById("artikel-view");
 
-// Daftar artikel (akan terisi otomatis)
-let artikelList = [];
+// ----------- TAMPILKAN DAFTAR ARTIKEL -----------
+function loadArticleList() {
+  articleView.style.display = "none";
+  listContainer.style.display = "block";
 
-// Ambil daftar file dari GitHub (API public)
-fetch("https://api.github.com/repos/sdnegericimapag/ku/contents/artikel/")
-  .then(response => response.json())
-  .then(files => {
-    files.forEach(file => {
-      if (file.name.endsWith(".html")) {
-        artikelList.push(file.name);
-      }
+  fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`)
+    .then(res => res.json())
+    .then(files => {
+      const artikelFiles = files.filter(f => f.name.endsWith(".html"));
+
+      artikelFiles.sort((a, b) => b.name.localeCompare(a.name));
+
+      listContainer.innerHTML = "";
+
+      artikelFiles.forEach(file => {
+        const namaFile = file.name.replace(".html", "");
+        const judul = namaFile.substring(11).replace(/-/g, " ");
+        const tanggal = namaFile.substring(0, 10);
+
+        listContainer.innerHTML += `
+          <div class="artikel-card">
+            <h3>${judul}</h3>
+            <div class="tanggal">${tanggal}</div>
+            <button class="btn-baca" onclick="loadArticle('${file.path}')">Baca Artikel</button>
+          </div>
+        `;
+      });
     });
+}
 
-    // Urutkan berdasarkan nama file (tanggal)
-    artikelList.sort().reverse();
+// ----------- BACA ARTIKEL DI DALAM HALAMAN -----------
+function loadArticle(path) {
 
-    // Tampilkan daftar
-    artikelList.forEach(namaFile => {
-      const tanggal = namaFile.substring(0, 10); // 2025-01-18
-      const judul = namaFile.replace(".html", "").substring(11);
+  fetch(`https://raw.githubusercontent.com/${username}/${repo}/main/${path}`)
+    .then(res => res.text())
+    .then(html => {
 
-      container.innerHTML += `
-        <div class="item-artikel">
-          <h2>${judul.replace(/-/g, " ")}</h2>
-          <small>${tanggal}</small><br>
-          <a href="${folder}${namaFile}">Baca Artikel</a>
-          <hr>
+      listContainer.style.display = "none";
+      articleView.style.display = "block";
+
+      articleView.innerHTML = `
+        <div class="artikel-full">
+          ${html}
+          <br><br>
+          <button class="btn-kembali" onclick="loadArticleList()">⬅ Kembali ke Berita</button>
         </div>
       `;
     });
-  })
-  .catch(error => {
-    container.innerHTML = "Gagal memuat artikel.";
-  });
+}
 
+loadArticleList();
