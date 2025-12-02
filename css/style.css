@@ -479,6 +479,40 @@ p {
   }
 }
 
+/*--- artikel terbaru--*/
+.btn-baca {
+  background: #0084d1;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-baca:hover {
+  background: #006ba3;
+}
+
+.artikel-full {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #cdeeff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.btn-kembali {
+  padding: 8px 14px;
+  background: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn-kembali:hover {
+  background: #222;
+}
 
 /* Responsif HP */
 @media (max-width: 600px) {
@@ -494,6 +528,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
