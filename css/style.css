@@ -370,6 +370,24 @@ p {
   font-weight: bold;
 }
 
+* ==========================================
+   WRAPPER BERITA TERBARU
+   ========================================== */
+.berita-terbaru {
+  max-width: 1116px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.berita-terbaru h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #222;
+}
 
 /* ===============================
    LIST ARTIKEL
@@ -466,4 +484,5 @@ p {
     padding: 8px;
   }
 }
+
 
