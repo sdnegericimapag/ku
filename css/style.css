@@ -447,7 +447,7 @@ p {
   border-radius: 12px;
   border: 1px solid #cdeeff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-  max-width: 1116px;
+  
    
 }
 
@@ -469,6 +469,7 @@ p {
     padding: 8px;
   }
 }
+
 
 
 
