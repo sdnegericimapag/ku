@@ -482,6 +482,32 @@ p {
 <div id="artikel-list" class="artikel-list"></div>
 <div id="artikel-view" class="artikel-view" style="display:none;"></div>
 
+/* Tombol Download Sederhana */
+.download-simple {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #007bff;
+    border: 1.8px solid #007bff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+}
+
+/* Hover Efek */
+.download-simple:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Ukuran Icon */
+.download-simple i {
+    font-size: 18px;
+}
 
 
 
@@ -496,6 +522,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
