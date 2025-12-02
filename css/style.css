@@ -379,7 +379,6 @@ p {
   padding: 15px;
   margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-   max-width: 1116px;
 }
 
 /* Flex kiri–kanan */
@@ -446,6 +445,8 @@ p {
   border-radius: 12px;
   border: 1px solid #cdeeff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  max-width: 1116px;
+   
 }
 
 /* ===============================
@@ -466,6 +467,7 @@ p {
     padding: 8px;
   }
 }
+
 
 
 
