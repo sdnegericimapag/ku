@@ -467,23 +467,29 @@ p {
    KOTAK LIST ARTIKEL
    ========================================== */
 .artikel-card {
-  padding: 18px;
+  background: #f0f8ff;
+  border-radius: 15px;
+  padding: 0;
   margin-bottom: 20px;
-  background: #f2f8ff;
-  border-radius: 10px;
-  border: 1px solid #d4e7ff;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .artikel-card h3 {
   margin: 0 0 6px 0;
   font-size: 20px;
   font-weight: bold;
+   margin-top: 0px;
 }
 
 .artikel-card .tanggal {
   font-size: 14px;
   color: #666;
   margin-bottom: 10px;
+   padding: 30px;
+}
+.artikel-card button {
+  margin-top: 10px;
 }
 
 .btn-baca {
@@ -663,6 +669,7 @@ p {
     text-align: center;
   }
 }
+
 
 
 
