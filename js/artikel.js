@@ -60,11 +60,18 @@ function loadArticle(path) {
 
       listElement.style.display = "none";
       viewElement.style.display = "block";
+      // Perbaiki semua path gambar agar menuju GitHub
+html = html.replace(/src="artikel\/([^"]+)"/g, function(match, imgPath) {
+  return `src="https://raw.githubusercontent.com/${username}/${repo}/main/artikel/${imgPath}"`;
+});
 
-      viewElement.innerHTML = html +
+viewElement.innerHTML = html +
+
+      
         `<br><a href="#" onclick="loadArticleList()" 
          style="font-weight:bold;color:#0077cc">← Kembali</a>`;
     });
 }
 
 loadArticleList();
+
