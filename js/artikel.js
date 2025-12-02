@@ -48,6 +48,9 @@ function loadArticleList() {
       htmlFiles.sort((a, b) => b.name.localeCompare(a.name));
 
       listElement.innerHTML = "";
+      listElement.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 
       htmlFiles.forEach(async file => {
         const namaFile = file.name.replace(".html", "");
@@ -120,5 +123,6 @@ function loadArticle(path, evt) {
 }
 
 loadArticleList();
+
 
 
