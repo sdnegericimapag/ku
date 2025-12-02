@@ -444,6 +444,90 @@ p {
 }
 
 
+/* ==========================================
+   WRAPPER BERITA TERBARU
+   ========================================== */
+.berita-terbaru {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.berita-terbaru h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ==========================================
+   KOTAK LIST ARTIKEL
+   ========================================== */
+.artikel-card {
+  padding: 18px;
+  margin-bottom: 20px;
+  background: #f2f8ff;
+  border-radius: 10px;
+  border: 1px solid #d4e7ff;
+}
+
+.artikel-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.artikel-card .tanggal {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.btn-baca {
+  padding: 7px 14px;
+  font-size: 14px;
+  background: #008cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-baca:hover {
+  background: #006dcc;
+}
+
+/* ==========================================
+   HALAMAN ARTIKEL PENUH
+   ========================================== */
+#artikel-view {
+  margin-top: 20px;
+}
+
+.artikel-full {
+  padding: 20px;
+  background: #fdfdfd;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  line-height: 1.7;
+}
+
+.btn-kembali {
+  padding: 8px 14px;
+  background: #444;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-kembali:hover {
+  background: #000;
+}
+
 
 /* =========================================================
    7. RESPONSIVE (HP)
@@ -527,6 +611,57 @@ p {
     .saran-frame iframe {
         height: 1100px;
     }
+}
+
+/* ============================
+   RESPONSIVE HP
+   ============================ */
+
+@media (max-width: 768px) {
+
+  /* Container berita menyesuaikan */
+  .berita-terbaru {
+    width: 92%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .artikel-card {
+    padding: 15px;
+  }
+
+  .artikel-card h3 {
+    font-size: 18px;
+  }
+
+  .artikel-card .tanggal {
+    font-size: 13px;
+  }
+
+  .btn-baca {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* Artikel penuh */
+  .artikel-full {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .btn-kembali {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* H2 Judul section */
+  .berita-terbaru h2 {
+    font-size: 22px;
+    text-align: center;
+  }
 }
 
 
