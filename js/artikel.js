@@ -39,7 +39,7 @@ async function getSnippet(path) {
 // ============================
 function loadArticleList() {
   listElement.style.display = "block";
-  viewElement.style.display = "block";
+  viewElement.style.display = "none";
 
   fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`)
     .then(res => res.json())
@@ -120,4 +120,5 @@ function loadArticle(path, evt) {
 }
 
 loadArticleList();
+
 
