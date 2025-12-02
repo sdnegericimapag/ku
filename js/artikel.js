@@ -58,19 +58,35 @@ function loadArticle(path) {
     .then(res => res.text())
     .then(html => {
 
-      // SEMBUNYIKAN LIST & TAMPILKAN VIEW
+      // SEMBUNYIKAN LIST
       listElement.style.display = "none";
       viewElement.style.display = "block";
 
-      // PERBAIKI PATH GAMBAR
-      html = html.replace(/src="artikel\/([^"]+)"/g, function(match, imgPath) {
-        return `src="https://raw.githubusercontent.com/${username}/${repo}/main/artikel/${imgPath}"`;
+      // PERBAIKI PATH GAMBAR DI DALAM ARTIKEL
+      html = html.replace(/src="([^"]+)"/g, function(match, imgPath) {
+        // jika artikelnya pakai gambar lokal
+        if (!imgPath.startsWith("http")) {
+          return `src="https://raw.githubusercontent.com/${username}/${repo}/main/artikel/${imgPath}"`;
+        }
+        return match;
       });
 
-      // TAMPILKAN KE HALAMAN
-      viewElement.innerHTML =
-          html +
-        `<br><a href="" onclick="event.preventDefault(); loadArticleList()" 
-         style="font-weight:bold;color:#0077cc">← Kembali</a>`;
+      // BUAT TEMPLATE RAPIKAN ARTIKEL
+      viewElement.innerHTML = `
+        <div class="artikel-template">
+
+          <div class="artikel-template-body">
+            ${html}
+          </div>
+
+          <hr style="margin:25px 0">
+
+          <a href="" onclick="event.preventDefault(); loadArticleList()"
+             style="font-weight:bold; color:#0077cc; font-size:14px;">
+             ← Kembali
+          </a>
+
+        </div>
+      `;
     });
 }
