@@ -58,20 +58,19 @@ function loadArticle(path) {
     .then(res => res.text())
     .then(html => {
 
+      // SEMBUNYIKAN LIST & TAMPILKAN VIEW
       listElement.style.display = "none";
       viewElement.style.display = "block";
-      // Perbaiki semua path gambar agar menuju GitHub
-html = html.replace(/src="artikel\/([^"]+)"/g, function(match, imgPath) {
-  return `src="https://raw.githubusercontent.com/${username}/${repo}/main/artikel/${imgPath}"`;
-});
 
-viewElement.innerHTML = html +
+      // PERBAIKI PATH GAMBAR
+      html = html.replace(/src="artikel\/([^"]+)"/g, function(match, imgPath) {
+        return `src="https://raw.githubusercontent.com/${username}/${repo}/main/artikel/${imgPath}"`;
+      });
 
-      
-        `<br><a href="#" onclick="loadArticleList()" 
+      // TAMPILKAN KE HALAMAN
+      viewElement.innerHTML =
+          html +
+        `<br><a href="" onclick="event.preventDefault(); loadArticleList()" 
          style="font-weight:bold;color:#0077cc">← Kembali</a>`;
     });
 }
-
-loadArticleList();
-
