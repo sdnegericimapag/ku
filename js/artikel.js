@@ -8,7 +8,7 @@ const container = document.getElementById('daftar-artikel');
 let artikelList = [];
 
 // Ambil daftar file dari GitHub (API public)
-fetch(`https://api.github.com/repos/sdnegericimapag/ku/REPO/contents/${folder}`)
+fetch("https://api.github.com/repos/sdnegericimapag/ku/contents/artikel/")
   .then(response => response.json())
   .then(files => {
     files.forEach(file => {
@@ -38,3 +38,4 @@ fetch(`https://api.github.com/repos/sdnegericimapag/ku/REPO/contents/${folder}`)
   .catch(error => {
     container.innerHTML = "Gagal memuat artikel.";
   });
+
