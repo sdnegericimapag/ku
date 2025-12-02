@@ -356,7 +356,7 @@ p {
   display: block;
   width: 150px;
   height: 2px;
-  background: linear-gradient(to right, white, #FFD700);
+  background: linear-gradient(to right, white, #0070C0);
   margin-top: 5px;
 }
 
@@ -494,6 +494,7 @@ p {
         height: 1100px;
     }
 }
+
 
 
 
