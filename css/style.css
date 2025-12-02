@@ -1,517 +1,39 @@
-/* =========================================================
-   1. RESET DASAR
-   ========================================================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* =========================================================
-   2. GLOBAL FONT SETTINGS
-   ========================================================= */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
-  padding-top: 70px; /* Agar konten tidak tertutup navbar fixed */
-  background: #EBFAFF;
-}
-
-/* Judul Utama */
-h1 {
-  font-size: 22px;
-  font-weight: bold;
-  color: #111;
-  margin-bottom: 5px;
-  line-height: 1;
-}
-
-/* Judul Sub */
-h2 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #222;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  line-height: 1;
-}
-
-/* Judul Kecil */
-h3 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  line-height: 1;
-}
-
-/* Paragraf */
-p {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 14px;
-  line-height: 1;
-}
-
-/* =========================================================
-   3. NAVBAR
-   ========================================================= */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #00B0F0;
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.navbar .logo {
-  display: flex;
-  align-items: center;
-}
-
-.navbar .logo img {
-  height: 45px;
-  margin-right: 10px;
-}
-
-.navbar .logo span {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-}
-
-.navbar ul li {
-  position: relative;
-}
-
-.navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 12px 20px;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  background: #009AD0;
-  color: yellow;
-}
-
-/* SUBMENU */
-.navbar ul li ul {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #0078A2;
-  display: none;
-  min-width: 180px;
-  flex-direction: column;
-}
-
-.navbar ul li:hover ul {
-  display: flex;
-}
-
-.navbar ul li ul li a {
-  padding: 10px;
-  border-top: 1px solid rgba(255,255,255,0.2);
-}
-
-/* =========================================================
-   4. BANNER
-   ========================================================= */
-.banner {
-  position: relative;
-}
-
-.banner img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-}
-
-.banner-text {
-  position: absolute;
-  top: 90%;
-  transform: translateY(-50%);
-  text-shadow:
-    0 6px 9px rgba(255,255,255,0.7),
-    0 0 13px rgba(0,0,0,0.6);
-  color: white;
-}
-
-/* Kiri */
-.banner-text.left {
-  left: 60px;
-  font-size: 16px;
-  font-family: 'Trebuchet MS', sans-serif;
-  font-style: italic;
-}
-
-/* Kanan */
-.banner-text.right {
-  right: 60px;
-  font-size: 28px;
-  font-family: 'Mistral', sans-serif;
-}
-
-/* =========================================================
-   5. DUA KOLOM (TWO COLUMN)
-   ========================================================= */
-.two-column {
-  display: flex;
-  gap: 20px;
-  margin: 20px auto;
-  padding: 0 40px;
-  max-width: 1200px;
-  box-sizing: border-box;
-}
-
-/* Kolom kiri */
-.left-content {
-  flex: 2;
-  background: #f0f0f0;
-  padding: 15px;
-  border-radius: 5px;
-  /*outline: 1px solid #820041;*/
-  /*outline-offset: 5px;*/
-   border: 2px solid #bde6f5;
-   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* Kolom kanan */
-.right-content {
-  flex: 1;
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  /*outline: 1px solid #820041;*/
-  /*outline-offset: 5px;*/
-   border: 2px solid #bde6f5;
-   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* =========================================================
-   6. CONTAINER 1 KOLOM
-   ========================================================= */
-.container {
-  max-width: 1116px;
-  margin: 20px auto;
-  padding: 20px; 
-  background: #f0f0f0;
-  border-radius: 10px;
-  /*outline: 1px solid #820041;*/
-  /*outline-offset: 5px;*/
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  box-sizing: border-box;  /* konsisten hitung padding */
-  border: 2px solid #bde6f5;
-
-}
-
-.container > * + * {
-  margin-top: 15px;
-}
-
-/* ===== TABEL 4 KOLOM CANTIK ===== */
-.table-container {
-  max-width: 1116px;
-  margin: 20px auto;
-  padding: 20px 40px;
-  background: #fdf7fb; /* pink muda lembut */
-  border-radius: 10px;
-  /*outline: 1px solid #820041;*/
-  /*outline-offset: 5px;*/
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  box-sizing: border-box;
-  border: 2px solid #bde6f5;
-}
-
-.table-4col {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  font-size: 14px;
-  color: #333;
-}
-
-/* Header tabel */
-.table-4col thead th {
-  background: #D00068;      /* warna tema */
-  color: white;
-  padding: 12px;
-  font-size: 15px;
-  border: 1px solid #bb0055;
-}
-
-/* Isi tabel */
-.table-4col tbody td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  background: #fff;
-}
-
-/* Strip baris */
-.table-4col tbody tr:nth-child(even) td {
-  background: #f7e8f0;     /* pink muda */
-}
-
-/* Hover */
-.table-4col tbody tr:hover td {
-  background: #ffe3f0;
-  transition: 0.2s;
-}
-
-/* Container Saran & Pesan */
-.saran-pesan-section {
-    background: #E7F7FF;
-    border: 2px solid #bde6f5;
-    border-radius: 15px;
-    padding: 25px;
-    margin: 40px auto;
-    width: 90%;
-    max-width: 900px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* Header + ICON */
-.saran-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-
-.saran-header i {
-    font-size: 28px;
-    color: #007baf;
-    background: #d9f3ff;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-}
-
-.saran-header h2 {
-    font-size: 24px;
-    color: #004d66;
-    margin: 0;
-}
-
-/* Frame Google Form */
-.saran-frame iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-    border-radius: 10px;
-}
-
-/* ========================== */
-/*          FOOTER            */
-/* ========================== */
-.custom-footer {
-  background-color: #00AEEF;      /* Warna biru utama */
-  color: white;
-  padding: 20px 20px;
-  font-family: Arial, sans-serif; /* Ubah font di sini */
-}
-
-/* Container kolom */
-.custom-footer .footer-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-/* Kolom */
-.custom-footer .footer-column {
-  flex: 1;
-  min-width: 260px;
-}
-
-/* Judul Kolom */
-.custom-footer .footer-column h3 {
-  font-size: 16px;                /* ukuran judul */
-  margin-bottom: 12px;
-  position: relative;
-  padding-bottom: 5px;
-}
-
-/* Garis bawah judul */
-.custom-footer .footer-column h3::after {
-  content: "";
-  display: block;
-  width: 150px;
-  height: 2px;
-  background: linear-gradient(to right, white, #0070C0);
-  margin-top: 5px;
-}
-
-/* Isi kolom */
-.custom-footer p, 
-.custom-footer span {
-  color: white;                   /* semua kolom putih */
-  font-size: 13px;                /* ukuran teks */
-}
-
-/* Ikon */
-.custom-footer i {
-  margin-right: 8px;
-}
-
-/* Lokasi */
-.custom-footer .footer-location {
-  display: grid;
-  grid-template-columns: 18px auto;
-  margin: 6px 0;
-}
-
-.custom-footer .footer-address {
-  margin-top: 2px;
-}
-
-/* TAGS */
-.custom-footer .tags span {
-  display: inline-block;
-  border: 1px solid white;
-  padding: 6px 12px;
-  margin: 5px 5px 0 0;
-  font-size: 13px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.custom-footer .tags span:hover {
-  color: #FFD700;
-  border-color: #FFD700;
-}
-
-/* SOSIAL MEDIA ICON */
-.custom-footer .social-icons a img {
-  width: 35px;   /* ubah ukuran icon */
-  height: 35px;
-  margin-right: 10px;
-}
-
-/* Hapus garis bawah pada semua link di footer */
-.custom-footer a {
-  text-decoration: none !important;
-}
-
-/* Khusus social icon biar bersih */
-.custom-footer .social-icons a {
-  text-decoration: none !important;
-  border: none;
-  outline: none;
-}
-
-.custom-footer .social-icons img {
-  display: inline-block;
-  border: none;
-  outline: none;
-}
-
-
-/* COPYRIGHT */
-.custom-footer .footer-bottom {
-  margin-top: 35px;
-  background-color: #00688B; /* warna strip bawah */
-  text-align: center;
-  padding: 8px 0;
-  font-size: 14px;
-  font-style: italic;
-  color: black;              /* default: hitam */
-}
-
-
-/* SD NegerI Cimapag putih */
-.custom-footer .footer-bottom .footer-school {
-  color: white;
-  font-weight: bold;
-}
-
-
-/* ==========================================
-   WRAPPER BERITA TERBARU
-   ========================================== */
-.berita-terbaru {
-  max-width: 1116px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.berita-terbaru h2 {
-  margin-bottom: 20px;
-  font-size: 26px;
-  font-weight: bold;
-  color: #222;
-}
-
-/* ==========================================
-   KOTAK LIST ARTIKEL
-   ========================================== */
+/* ===============================
+   LIST ARTIKEL
+   ===============================*/
 .artikel-card {
   background: #f0f8ff;
   border-radius: 15px;
-  padding: 15;
+  padding: 15px;
   margin-bottom: 20px;
-  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.artikel-card h3 {
-  margin: 0 0 6px 0;
-  font-size: 20px;
-  font-weight: bold;
-   margin-top: 0px;
-}
-
-.artikel-card .tanggal {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 10px;
-   padding: 30px;
-}
-.artikel-card button {
-  margin-top: 10px;
-}
+/* Flex kiri–kanan */
 .artikel-row {
   display: flex;
   gap: 20px;
   align-items: flex-start;
 }
 
-.artikel-img {
-  width: 180px;
-  height: 120px;
-  border-radius: 12px;
-  object-fit: cover;
-   margin-bottom: 20px;   /* jarak gambar ke teks */
-   display: block;
-}
-/* supaya gambar tidak menempel di kiri */
+/* Wrapper gambar (ada padding biar tidak mepet) */
 .artikel-image-wrapper {
-  padding: 10px;              /* jarak dalam */
-  background: #f6f6f6;        /* warna lembut */
+  padding: 10px;
+  background: #f7fafd;
   border-radius: 12px;
-  margin-bottom: 20px;
+  flex-shrink: 0;
+}
 
+/* Gambar */
+.artikel-img {
+  width: 160px;
+  height: 110px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Area teks */
 .artikel-body {
   flex: 1;
 }
@@ -528,9 +50,9 @@ p {
   margin-bottom: 10px;
 }
 
+/* Tombol baca */
 .btn-baca {
   padding: 7px 14px;
-  font-size: 14px;
   background: #008cff;
   color: white;
   border: none;
@@ -542,170 +64,22 @@ p {
   background: #006dcc;
 }
 
-/* ==========================================
-   HALAMAN ARTIKEL PENUH
-   ========================================== */
-#artikel-view {
-  margin-top: 20px;
-}
-
+/* ===============================
+   ARTIKEL PENUH
+   ===============================*/
 .artikel-full {
   padding: 20px;
-  background: #fdfdfd;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  line-height: 1.7;
-}
-
-.btn-kembali {
-  padding: 8px 14px;
-  background: #444;
-  border: none;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.btn-kembali:hover {
-  background: #000;
-}
-
-
-/* =========================================================
-   7. RESPONSIVE (HP)
-   ========================================================= */
-@media (max-width: 768px) {
-
-  .navbar {
-    flex-direction: column;
-  }
-
-  .navbar ul li a {
-    font-size: 14px;
-    padding: 10px;
-    display: block;
-    text-align: center;
-  }
-
-  .banner {
-    margin-top: 120px;
-  }
-
-  .two-column {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-}
-.table-4col {
-    font-size: 13px;
-  }
-
-  .table-container {
-    padding: 20px;
-  }
-}
-
-/*--- artikel terbaru--*/
-.btn-baca {
-  background: #0084d1;
-  color: white;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.btn-baca:hover {
-  background: #006ba3;
-}
-
-.artikel-full {
   background: white;
-  padding: 20px;
   border-radius: 12px;
   border: 1px solid #cdeeff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
-.btn-kembali {
-  padding: 8px 14px;
-  background: #444;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-}
+/* ===============================
+   RESPONSIVE
+   ===============================*/
+@media (max-width: 700px) {
 
-.btn-kembali:hover {
-  background: #222;
-}
-
-/* Responsif HP */
-@media (max-width: 600px) {
-    .saran-pesan-section {
-        padding: 15px;
-    }
-
-    .saran-header h2 {
-        font-size: 20px;
-    }
-
-    .saran-frame iframe {
-        height: 1100px;
-    }
-}
-
-/* ============================
-   RESPONSIVE HP
-   ============================ */
-
-@media (max-width: 768px) {
-
-  /* Container berita menyesuaikan */
-  .berita-terbaru {
-    width: 92%;
-    margin: 20px auto;
-    padding: 15px;
-  }
-
-  .artikel-card {
-    padding: 15px;
-  }
-
-  .artikel-card h3 {
-    font-size: 18px;
-  }
-
-  .artikel-card .tanggal {
-    font-size: 13px;
-  }
-
-  .btn-baca {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  /* Artikel penuh */
-  .artikel-full {
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  .btn-kembali {
-    width: 100%;
-    margin-top: 15px;
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  /* H2 Judul section */
-  .berita-terbaru h2 {
-    font-size: 22px;
-    text-align: center;
-  }
-   
-@media screen and (max-width: 600px) {
   .artikel-row {
     flex-direction: column;
   }
@@ -714,40 +88,8 @@ p {
     width: 100%;
     height: 200px;
   }
+
+  .artikel-image-wrapper {
+    padding: 8px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
