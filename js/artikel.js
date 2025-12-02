@@ -49,44 +49,26 @@ function loadArticleList() {
 
 }
 
-// ============================
-// BACA ARTIKEL PENUH
-// ============================
+// =====================================
+// BACA ARTIKEL DI DALAM HALAMAN
+// =====================================
 function loadArticle(path) {
-
   fetch(`https://raw.githubusercontent.com/${username}/${repo}/main/${path}`)
     .then(res => res.text())
     .then(html => {
+      listContainer.style.display = "none";
+      articleView.style.display = "block";
 
-      // SEMBUNYIKAN LIST
-      listElement.style.display = "none";
-      viewElement.style.display = "block";
-
-      // PERBAIKI PATH GAMBAR DI DALAM ARTIKEL
-      html = html.replace(/src="([^"]+)"/g, function(match, imgPath) {
-        // jika artikelnya pakai gambar lokal
-        if (!imgPath.startsWith("http")) {
-          return `src="https://raw.githubusercontent.com/${username}/${repo}/main/artikel/${imgPath}"`;
-        }
-        return match;
-      });
-
-      // BUAT TEMPLATE RAPIKAN ARTIKEL
-      viewElement.innerHTML = `
-        <div class="artikel-template">
-
-          <div class="artikel-template-body">
-            ${html}
-          </div>
-
-          <hr style="margin:25px 0">
-
-          <a href="" onclick="event.preventDefault(); loadArticleList()"
-             style="font-weight:bold; color:#0077cc; font-size:14px;">
-             ← Kembali
-          </a>
-
+      articleView.innerHTML = `
+        <div class="artikel-full">
+          ${html}
+          <br><br>
+          <button class="btn-kembali" onclick="loadArticleList()">⬅ Kembali ke Berita</button>
         </div>
       `;
     });
 }
+
+loadArticleList();
+
+  
