@@ -5,7 +5,9 @@ const folder = "artikel";
 const listContainer = document.getElementById("daftar-artikel");
 const articleView = document.getElementById("artikel-view");
 
-// ----------- TAMPILKAN DAFTAR ARTIKEL -----------
+// =====================================
+// TAMPILKAN DAFTAR ARTIKEL
+// =====================================
 function loadArticleList() {
   articleView.style.display = "none";
   listContainer.style.display = "block";
@@ -24,24 +26,43 @@ function loadArticleList() {
         const judul = namaFile.substring(11).replace(/-/g, " ");
         const tanggal = namaFile.substring(0, 10);
 
+        // --- CARIKAN GAMBAR DENGAN NAMA SAMA ---
+        const baseName = file.name.replace(".html", "");
+        const gambarJpg = files.find(f => f.name === `${baseName}.jpg`);
+        const gambarPng = files.find(f => f.name === `${baseName}.png`);
+
+        let gambar = "img/no-image.jpg"; // jika tidak ada gambar
+
+        if (gambarJpg) {
+          gambar = `https://raw.githubusercontent.com/${username}/${repo}/main/${folder}/${gambarJpg.name}`;
+        } else if (gambarPng) {
+          gambar = `https://raw.githubusercontent.com/${username}/${repo}/main/${folder}/${gambarPng.name}`;
+        }
+
+        // --- CARD DENGAN GAMBAR KIRI ---
         listContainer.innerHTML += `
           <div class="artikel-card">
-            <h3>${judul}</h3>
-            <div class="tanggal">${tanggal}</div>
-            <button class="btn-baca" onclick="loadArticle('${file.path}')">Baca Artikel</button>
+            <div class="artikel-row">
+              <img src="${gambar}" alt="${judul}" class="artikel-img" onerror="this.style.display='none'">
+              <div class="artikel-body">
+                <h3>${judul}</h3>
+                <div class="tanggal">${tanggal}</div>
+                <button class="btn-baca" onclick="loadArticle('${file.path}')">Baca Artikel</button>
+              </div>
+            </div>
           </div>
         `;
       });
     });
 }
 
-// ----------- BACA ARTIKEL DI DALAM HALAMAN -----------
+// =====================================
+// BACA ARTIKEL DI DALAM HALAMAN
+// =====================================
 function loadArticle(path) {
-
   fetch(`https://raw.githubusercontent.com/${username}/${repo}/main/${path}`)
     .then(res => res.text())
     .then(html => {
-
       listContainer.style.display = "none";
       articleView.style.display = "block";
 
