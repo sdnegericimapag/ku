@@ -478,6 +478,13 @@ p {
   margin-bottom: 15px;
 }
 
+
+<div id="artikel-list" class="artikel-list"></div>
+<div id="artikel-view" class="artikel-view" style="display:none;"></div>
+
+
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .artikel-card {
@@ -489,6 +496,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
