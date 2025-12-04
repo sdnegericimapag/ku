@@ -495,33 +495,44 @@ p {
 
 /* Tombol Download Sederhana */
 .download-simple {
-    display: inline-block;                /* display: inline-flex;  */
+    display: inline-flex;              /* gunakan flex agar icon + teks sejajar */
     align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
+    gap: 8px;                          /* beri jarak lebih lega */
+    padding: 10px 18px;                /* sedikit lebih besar untuk kesan premium */
     font-size: 16px;
     font-weight: 600;
-    color: white;
-    background-color: #4CAF50;   /* hijau segar */
-    border: 1.8px solid #007bff;
-    border-radius: 6px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4CAF50, #43a047); /* gradasi hijau segar */
+    border: none;                      /* lebih clean tanpa border */
+    border-radius: 8px;                /* radius lebih halus */
     text-decoration: none;
-    /* transition: 0.25s ease-in-out; */
-    transition: background-color 0.3s ease;
-}
-
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* bayangan lembut */
+    transition: all 0.3s ease;         /* transisi halus untuk semua perubahan */
+    cursor: pointer;
 }
 
 /* Hover Efek */
 .download-simple:hover {
-    background-color: #007bff;
-    color: #ffffff;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #007bff, #0056b3); /* gradasi biru elegan */
+    transform: translateY(-2px) scale(1.02);               /* efek naik + sedikit zoom */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);                /* bayangan lebih tegas */
+}
+
+/* Fokus (aksesibilitas) */
+.download-simple:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 3px;
 }
 
 /* Ukuran Icon */
 .download-simple i {
     font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* Animasi icon saat hover */
+.download-simple:hover i {
+    transform: translateX(3px); /* icon bergeser sedikit ke kanan */
 }
 
 
@@ -537,6 +548,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
