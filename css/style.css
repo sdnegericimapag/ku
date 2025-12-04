@@ -254,7 +254,7 @@ p {
 
 .kolom-kiri {
   width: 50px;   /* atur lebar sesuai kebutuhan */
-  text-align: left; /* opsional: biar teks rata kiri */
+  text-align: center; /* opsional: biar teks rata kiri */
   white-space: nowrap; /* opsional: cegah teks turun ke bawah */
 }
 .baris-atas {
@@ -533,6 +533,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
