@@ -257,6 +257,11 @@ p {
   text-align: left; /* opsional: biar teks rata kiri */
   white-space: nowrap; /* opsional: cegah teks turun ke bawah */
 }
+.baris-atas {
+  /* width: 50px;    atur lebar sesuai kebutuhan */
+  text-align: center; /* opsional: biar teks rata kiri */
+  /* white-space: nowrap; /* opsional: cegah teks turun ke bawah */
+}
 
 /* =========================================================
    8. SARAN & PESAN
@@ -528,6 +533,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
