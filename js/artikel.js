@@ -25,9 +25,7 @@ async function getSnippet(path) {
     const res = await fetch(`https://raw.githubusercontent.com/${username}/${repo}/main/${path}`);
     if (!res.ok) return "Klik untuk membaca isi artikel lengkap...";
     const html = await res.text();
-    // Buang semua tag HTML
-    const plain = html.replace(/<[^>]+>/g, "");
-    // Ambil 150 karakter pertama
+    const plain = html.replace(/<[^>]+>/g, ""); // buang tag HTML
     return plain.substring(0, 150) + "...";
   } catch {
     return "Klik untuk membaca isi artikel lengkap...";
@@ -49,19 +47,16 @@ function loadArticleList() {
 
       listElement.innerHTML = "";
       listElement.scrollIntoView({ behavior: "smooth", block: "start" });
-}
 
-
+      // ⬇ forEach HARUS di dalam blok ini
       htmlFiles.forEach(async file => {
         const namaFile = file.name.replace(".html", "");
         const tanggal = namaFile.substring(0, 10);
         const judul = namaFile.substring(11).replace(/-/g, " ");
         const thumbName = namaFile + ".jpg";
 
-        // Ambil snippet dari isi artikel
         const snippet = await getSnippet(file.path);
 
-        // Buat kartu artikel
         const card = document.createElement("div");
         card.className = "artikel-card";
         card.innerHTML = `
@@ -77,10 +72,9 @@ function loadArticleList() {
         `;
 
         const downloadContainer = card.querySelector(".download-links");
-
-        // Cek PDF, DOCX, XLSX
         const ekstensi = ["pdf", "docx", "xlsx"];
-        ekstensi.forEach(async ext => {
+
+        for (const ext of ekstensi) {
           const url = `https://raw.githubusercontent.com/${username}/${repo}/main/${folder}/${namaFile}.${ext}`;
           if (await fileExists(url)) {
             const dl = document.createElement("a");
@@ -90,7 +84,7 @@ function loadArticleList() {
             dl.textContent = `⬇ Download ${ext.toUpperCase()}`;
             downloadContainer.appendChild(dl);
           }
-        });
+        }
 
         listElement.appendChild(card);
       });
@@ -123,6 +117,3 @@ function loadArticle(path, evt) {
 }
 
 loadArticleList();
-
-
-
