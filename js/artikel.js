@@ -137,3 +137,4 @@ function loadArticle(path, evt) {
       viewElement.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 }
+loadArticleList();
