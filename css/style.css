@@ -252,6 +252,12 @@ p {
   transition: 0.2s;
 }
 
+.kolom-kiri {
+  width: 50px;   /* atur lebar sesuai kebutuhan */
+  text-align: left; /* opsional: biar teks rata kiri */
+  white-space: nowrap; /* opsional: cegah teks turun ke bawah */
+}
+
 /* =========================================================
    8. SARAN & PESAN
    ========================================================= */
@@ -522,6 +528,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
