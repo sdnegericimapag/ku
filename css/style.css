@@ -495,17 +495,21 @@ p {
 
 /* Tombol Download Sederhana */
 .download-simple {
-    display: inline-flex;
+    display: inline-block;                /* display: inline-flex;  */
     align-items: center;
     gap: 6px;
     padding: 8px 14px;
     font-size: 16px;
     font-weight: 600;
-    color: #007bff;
+    color: white;
+    background-color: #4CAF50;   /* hijau segar */
     border: 1.8px solid #007bff;
     border-radius: 6px;
     text-decoration: none;
-    transition: 0.25s ease-in-out;
+    /* transition: 0.25s ease-in-out; */
+    transition: background-color 0.3s ease;
+}
+
 }
 
 /* Hover Efek */
@@ -533,6 +537,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
