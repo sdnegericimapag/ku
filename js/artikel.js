@@ -91,6 +91,7 @@ function loadArticleList() {
     });
 }
 
+
 // =====================================
 // BACA ARTIKEL DI DALAM HALAMAN
 // =====================================
@@ -98,22 +99,41 @@ function loadArticle(path, evt) {
   if (evt && evt.preventDefault) evt.preventDefault();
 
   const rawUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/${path}`;
+  const namaFile = path.replace(`${folder}/`, "").replace(".html", "");
 
   fetch(rawUrl)
     .then(res => res.text())
-    .then(html => {
+    .then(async html => {
       listElement.style.display = "none";
       viewElement.style.display = "block";
 
-      viewElement.innerHTML = `
-        <div class="artikel-full">
-          ${html}
-          <br><br>
-          <button class="btn-kembali" onclick="loadArticleList()">⬅ Kembali ke Berita</button>
-        </div>
+      // Buat container artikel
+      const container = document.createElement("div");
+      container.className = "artikel-full";
+      container.innerHTML = `
+        ${html}
+        <br><br>
+        <button class="btn-kembali" onclick="loadArticleList()">⬅ Kembali ke Berita</button>
+        <div class="download-links"></div>
       `;
+
+      // Tambahkan link download
+      const downloadContainer = container.querySelector(".download-links");
+      const ekstensi = ["pdf", "docx", "xlsx"];
+      for (const ext of ekstensi) {
+        const url = `https://raw.githubusercontent.com/${username}/${repo}/main/${folder}/${namaFile}.${ext}`;
+        if (await fileExists(url)) {
+          const dl = document.createElement("a");
+          dl.href = url;
+          dl.className = "artikel-download";
+          dl.download = "";
+          dl.textContent = `⬇ Download ${ext.toUpperCase()}`;
+          downloadContainer.appendChild(dl);
+        }
+      }
+
+      viewElement.innerHTML = "";
+      viewElement.appendChild(container);
       viewElement.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 }
-
-loadArticleList();
