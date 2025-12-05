@@ -5,9 +5,7 @@ const folder = "artikel";
 const listElement = document.getElementById("artikel-list");
 const viewElement = document.getElementById("artikel-view");
 
-// ============================
-// CEK FILE ADA ATAU TIDAK
-// ============================
+// Cek file ada atau tidak
 async function fileExists(url) {
   try {
     const res = await fetch(url, { method: "HEAD" });
@@ -17,24 +15,20 @@ async function fileExists(url) {
   }
 }
 
-// ============================
-// AMBIL SNIPPET DARI ISI ARTIKEL
-// ============================
+// Ambil snippet dari isi artikel
 async function getSnippet(path) {
   try {
     const res = await fetch(`https://raw.githubusercontent.com/${username}/${repo}/main/${path}`);
     if (!res.ok) return "Klik untuk membaca isi artikel lengkap...";
     const html = await res.text();
-    const plain = html.replace(/<[^>]+>/g, ""); // buang tag HTML
+    const plain = html.replace(/<[^>]+>/g, "");
     return plain.substring(0, 150) + "...";
   } catch {
     return "Klik untuk membaca isi artikel lengkap...";
   }
 }
 
-// ============================
-// TAMPILKAN LIST ARTIKEL
-// ============================
+// Tampilkan list artikel
 function loadArticleList() {
   listElement.style.display = "block";
   viewElement.style.display = "none";
@@ -43,12 +37,11 @@ function loadArticleList() {
     .then(res => res.json())
     .then(files => {
       const htmlFiles = files.filter(f => f.name.endsWith(".html"));
+      // urutkan berdasarkan nama file (misalnya YYYY-MM-DD judul)
       htmlFiles.sort((a, b) => b.name.localeCompare(a.name));
 
       listElement.innerHTML = "";
-      listElement.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      // ⬇ forEach HARUS di dalam blok ini
       htmlFiles.forEach(async file => {
         const namaFile = file.name.replace(".html", "");
         const tanggal = namaFile.substring(0, 10);
@@ -71,9 +64,9 @@ function loadArticleList() {
           </div>
         `;
 
+        // Tambahkan link download jika ada
         const downloadContainer = card.querySelector(".download-links");
         const ekstensi = ["pdf", "docx", "xlsx"];
-
         for (const ext of ekstensi) {
           const url = `https://raw.githubusercontent.com/${username}/${repo}/main/${folder}/${namaFile}.${ext}`;
           if (await fileExists(url)) {
@@ -91,10 +84,7 @@ function loadArticleList() {
     });
 }
 
-
-// =====================================
-// BACA ARTIKEL DI DALAM HALAMAN
-// =====================================
+// Baca artikel di dalam halaman
 function loadArticle(path, evt) {
   if (evt && evt.preventDefault) evt.preventDefault();
 
@@ -107,13 +97,12 @@ function loadArticle(path, evt) {
       listElement.style.display = "none";
       viewElement.style.display = "block";
 
-      // Buat container artikel
       const container = document.createElement("div");
       container.className = "artikel-full";
       container.innerHTML = `
         ${html}
         <br><br>
-        <button class="btn-kembali" onclick="loadArticleList()">⬅ Kembali ke Berita</button>
+        <button class="btn-kembali" onclick="loadArticleList(); document.getElementById('artikel-list').scrollIntoView({behavior:'smooth'});">⬅ Kembali ke Berita</button>
         <div class="download-links"></div>
       `;
 
@@ -134,9 +123,10 @@ function loadArticle(path, evt) {
 
       viewElement.innerHTML = "";
       viewElement.appendChild(container);
+      // Fokus ke atas container artikel
       viewElement.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 }
+
+// Jalankan pertama kali
 loadArticleList();
-
-
