@@ -348,10 +348,36 @@ p {
 .footer-column span {
   color: white;
   font-size: 13px;
-  border: 1px solid #333;   /* garis kotak */
-  display: inline-block;    /* biar kotak mengikuti teks */
-
 }
+/* gaya umum untuk semua tag */
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 2px solid #333;   /* garis kotak */
+  border-radius: 6px;       /* sudut melengkung */
+  margin: 4px;
+  font-weight: bold;
+}
+
+/* gaya khusus tiap jenis tag */
+.pengumuman {
+  border-color: #e74c3c;    /* merah */
+  background-color: #fdecea;
+  color: #c0392b;
+}
+
+.sekilas-info {
+  border-color: #3498db;    /* biru */
+  background-color: #ecf6fd;
+  color: #2980b9;
+}
+
+.berita-kemaren {
+  border-color: #27ae60;    /* hijau */
+  background-color: #eafaf1;
+  color: #1e8449;
+}
+
 
 .footer-location {
   display: grid;
@@ -562,6 +588,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
