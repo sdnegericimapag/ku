@@ -345,7 +345,7 @@ p {
   display: block;
   width: 160px;
   height: 2px;
-  background: linear-gradient(to right, white 0%, #e6c200 100%);
+  background: linear-gradient(to right, white 0%, black 100%);
   margin-top: 5px;
 }
 
@@ -608,6 +608,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
