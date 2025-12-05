@@ -308,7 +308,7 @@ p {
 /* =========================================================
    9. FOOTER
    ========================================================= */
-.footer {
+.custom-footer {
   background-color: #00B0F0; /* Biru langit terang */
   color: white !important;
   padding: 40px 20px 20px;
@@ -608,6 +608,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
