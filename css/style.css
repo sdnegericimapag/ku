@@ -308,90 +308,126 @@ p {
 /* =========================================================
    9. FOOTER
    ========================================================= */
-.custom-footer {
-  background-color: #00AEEF;
-  color: white;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+.footer {
+  background-color: #00B0F0; /* Biru langit terang */
+  color: white !important;
+  padding: 40px 20px 20px;
 }
 
+.footer-container,
 .footer-container {
+  color: white !important;
   max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
 }
 
 .footer-column {
   flex: 1;
-  min-width: 260px;
+  min-width: 250px;
+  color: white !important;
 }
 
 .footer-column h3 {
-  font-size: 16px;
-  margin-bottom: 12px;
-  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 6px;
+ font-color: white !important;
 }
 
+/* Garis judul putih → kuning */
 .footer-column h3::after {
   content: "";
   display: block;
-  width: 150px;
+  width: 160px;
   height: 2px;
-  background: linear-gradient(to right, white, #0070C0);
+  background: linear-gradient(to right, white 0%, #e6c200 100%);
   margin-top: 5px;
 }
 
-.footer-column p,{
-   color: white;
+.footer-column p {
   font-size: 13px;
+  margin: 6px 0;
 }
 
-.footer-column span {
-  color: white;
-  font-size: 13px;
+.footer-column i {
+  margin-right: 7px;
+}
+
+/* TAG BOX */
+.tags span {
   display: inline-block;
-  padding: 6px 12px;
-  border: 2px solid #e74c3c;   /* kotak merah */
-  border-radius: 6px;
-  background-color: #fdecea;   /* latar lembut */
-  color: #c0392b;
-  font-weight: bold;  
+  border: 1px solid white;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  font-size: 14px;
+  cursor: pointer;
 }
 
+.social-icons a {
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social-icons a img {
+  width: 28px;   /* sesuaikan ukuran icon */
+  height: 28px;
+  object-fit: contain;
+}
+/* COPYRIGHT BAR */
+.footer-bottom {
+  margin-top: 25px;
+  background-color: #00759E; /* hijau terang seperti contoh */
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  font-style: italic;
+  color: black !important;
+}
+
+/* SD Negeri Cimapag khusus putih */
+.footer-bottom .footer-school {
+  color: white !important;
+  font-weight: bold;
+}
+
+.school-red {
+  color: red;
+  font-weight: bold;
+}
+.tags a span {
+  color: white;              /* warna awal */
+  transition: 0.3s;
+}
+
+.tags a:hover span {
+  color: #FFD500;            /* warna saat hover */
+}
+
+/* Perataan alamat agar baris kedua sejajar dengan teks di baris pertama */
+.footer-location {
+  display: flex;
+  align-items: flex-start;
+}
 
 .footer-location {
   display: grid;
   grid-template-columns: 18px auto;
-  margin: 6px 0;
+   color: white !important;
 }
 
-.social-icons a img {
-  width: 35px;
-  height: 35px;
-  margin-right: 10px;
+/* Baris kedua masuk ke dalam, tidak sejajar ikon */
+.footer-address {
+  display: block;
+  padding-left: 0px; /* sesuaikan, ini sudah pas untuk teks yang kamu pakai */
+  margin-top: 3px;
 }
 
-.custom-footer a {
-  text-decoration: none !important;
-}
-
-.footer-bottom {
-  margin-top: 35px;
-  background-color: #00688B;
-  text-align: center;
-  padding: 8px 0;
-  font-size: 14px;
-  font-style: italic;
-  color: black;
-}
-
-.footer-bottom .footer-school {
-  color: white;
-  font-weight: bold;
-}
 /* =========================================================
    ARTIKEL CARD WRAPPER
 ========================================================= */
@@ -571,6 +607,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
