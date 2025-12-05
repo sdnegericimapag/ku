@@ -11,8 +11,37 @@
   <link rel="stylesheet" href="css/style.css">
   
   <style>
+  /* Container dengan lebar 1116px */
+.container {
+  width: 1116px;
+  margin: 0 auto;          /* agar container center di halaman */
+  text-align: center;      /* isi container rata tengah */
+}
+
+/* Gambar di tengah */
+.center-image {
+  max-width: 100%;         /* biar tidak melebihi container */
+  height: auto;
+  display: block;
+  margin: 0 auto;          /* center horizontal */
+}
+
+/* Link download */
+.download-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.download-link:hover {
+  background-color: #2980b9;
+}
   
-  <style>
 
     .image-text {
       display: flex;
@@ -88,12 +117,13 @@
 <!-- CONTAINER TUNGGAL DI BAWAH SECTION DUA KOLOM -->
 <div class="container">
   <h1>Logo SD Negeri Cimapag</h1>
-    <div class="logo-section">
-  <img src="https://raw.githubusercontent.com/sdnegericimapag/ku/main/img/logocimapag1.png" alt="Logo SD Negeri Cimapag">
+   <!-- Container -->
+<div class="container">
+  <!-- Gambar -->
+  <img src="img/logocimapag1.jpg" alt="Deskripsi gambar" class="center-image">
 
-  <a href="https://drive.google.com/file/d/15YabiCUDehRUdl8gWba57tBaAjArtGMO/view?usp=sharing" download class="btn-download">
-    <i class="fa-solid fa-download"></i> Download Gambar
-  </a>
+  <!-- Link download -->
+  <a href="img/logocimapag1.jpg" download class="download-link">Download Gambar</a>
 </div>
 
   <p>Ini paragraf pertama.</p>
@@ -194,6 +224,7 @@
 
 </body>
 </html>
+
 
 
 
