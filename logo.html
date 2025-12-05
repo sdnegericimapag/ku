@@ -11,6 +11,31 @@
   <link rel="stylesheet" href="css/style.css">
   
   <style>
+  .download-container {
+  text-align: center;      /* gambar + tombol jadi di tengah */
+  margin-top: 20px;
+}
+
+.download-container img {
+  width: 150px;            /* boleh diubah */
+  height: auto;
+  margin-bottom: 15px;     /* jarak antara gambar & tombol */
+}
+
+.download-btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #0056b3;
+}
     .image-text {
       display: flex;
       align-items: flex-start;   /* teks sejajar atas */
@@ -95,7 +120,15 @@
   <p>Ini paragraf pertama.</p>
   <p>Ini paragraf kedua.</p>
 </div>
-
+<div class="download-container">
+  <img src="https://raw.githubusercontent.com/sdnegericimapag/ku/main/img/logocimapag1.png" alt="Logo SD">
+  
+  <a href="https://raw.githubusercontent.com/sdnegericimapag/ku/main/img/logocimapag1.png" 
+     download
+     class="download-btn">
+    <i class="fa-solid fa-download"></i> Download Gambar
+  </a>
+</div>
   <!-- TABEL-->
 <div class="table-container">
   <table class="table-4col">
@@ -191,6 +224,7 @@
 
 </body>
 </html>
+
 
 
 
