@@ -349,33 +349,18 @@ p {
   font-size: 13px;
 }
 
-.footer-column .tags {
+.footer-column span {
+  color: white;
+  font-size: 13px;
   display: inline-block;
   padding: 6px 12px;
-  border: 2px solid #333;
+  border: 2px solid #e74c3c;   /* kotak merah */
   border-radius: 6px;
-  margin: 4px;
-  font-weight: bold;
-}
-
-/* warna khusus */
-.footer-column .pengumuman {
-  border-color: #e74c3c;
-  background-color: #fdecea;
+  background-color: #fdecea;   /* latar lembut */
   color: #c0392b;
+  font-weight: bold;  
 }
 
-.footer-column .sekilas-info {
-  border-color: #3498db;
-  background-color: #ecf6fd;
-  color: #2980b9;
-}
-
-.footer-column .berita-kemaren {
-  border-color: #27ae60;
-  background-color: #eafaf1;
-  color: #1e8449;
-}
 
 .footer-location {
   display: grid;
@@ -586,6 +571,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
