@@ -349,6 +349,7 @@ p {
   color: white;
   font-size: 13px;
   border: 1px solid #333;   /* garis kotak */
+  display: inline-block;    /* biar kotak mengikuti teks */
 
 }
 
@@ -561,6 +562,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
