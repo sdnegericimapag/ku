@@ -44,6 +44,11 @@ h3 {
   line-height: 1;
 }
 
+.container ol li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
 /* Paragraf */
 p {
   font-size: 14px;
@@ -608,6 +613,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
