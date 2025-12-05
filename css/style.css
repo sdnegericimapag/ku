@@ -348,6 +348,8 @@ p {
 .footer-column span {
   color: white;
   font-size: 13px;
+  border: 1px solid #333;   /* garis kotak */
+
 }
 
 .footer-location {
@@ -559,6 +561,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
