@@ -32,9 +32,6 @@ async function getSnippet(path) {
   }
 }
 
-// ============================
-// TAMPILKAN LIST ARTIKEL
-// ============================
 function loadArticleList() {
   listElement.style.display = "block";
   viewElement.style.display = "none";
@@ -43,12 +40,18 @@ function loadArticleList() {
     .then(res => res.json())
     .then(files => {
       const htmlFiles = files.filter(f => f.name.endsWith(".html"));
-      htmlFiles.sort((a, b) => b.name.localeCompare(a.name));
+
+      // Urutkan berdasarkan tanggal di nama file (format YYYY-MM-DD)
+      htmlFiles.sort((a, b) => {
+        const dateA = new Date(a.name.substring(0, 10));
+        const dateB = new Date(b.name.substring(0, 10));
+        return dateB - dateA; // terbaru duluan
+      });
 
       listElement.innerHTML = "";
       listElement.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      // ⬇ forEach HARUS di dalam blok ini
+      // tampilkan semua artikel sebagai list
       htmlFiles.forEach(async file => {
         const namaFile = file.name.replace(".html", "");
         const tanggal = namaFile.substring(0, 10);
@@ -88,10 +91,13 @@ function loadArticleList() {
 
         listElement.appendChild(card);
       });
+
+      // ⬇ Tambahkan ini: langsung buka artikel terbaru (file pertama)
+      if (htmlFiles.length > 0) {
+        loadArticle(htmlFiles[0].path);
+      }
     });
 }
-
-
 // =====================================
 // BACA ARTIKEL DI DALAM HALAMAN
 // =====================================
@@ -138,3 +144,4 @@ function loadArticle(path, evt) {
     });
 }
 loadArticleList();
+
