@@ -11,29 +11,34 @@
   <link rel="stylesheet" href="css/style.css">
   
   <style>
-  .download-container {
-  text-align: center;      /* gambar + tombol jadi di tengah */
-  margin-top: 20px;
+  
+  <style>
+.logo-section {
+  display: flex;
+  flex-direction: column;       /* gambar di atas, tombol di bawah */
+  align-items: center;          /* pusat horizontal */
+  justify-content: center;      /* pusat vertikal */
+  gap: 15px;                    /* jarak gambar - tombol */
+  padding: 20px 0;
 }
 
-.download-container img {
-  width: 200px;            /* boleh diubah */
+.logo-section img {
+  width: 280px; /* boleh ubah */
   height: auto;
-  margin-bottom: 60px;     /* jarak antara gambar & tombol */
 }
 
-.download-btn {
+.btn-download {
   display: inline-block;
   background: #007bff;
   color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 12px 22px;
+  font-size: 18px;
+  border-radius: 10px;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.download-btn:hover {
+.btn-download:hover {
   background: #0056b3;
 }
     .image-text {
@@ -110,12 +115,10 @@
 <!-- CONTAINER TUNGGAL DI BAWAH SECTION DUA KOLOM -->
 <div class="container">
   <h1>Logo SD Negeri Cimapag</h1>
-     <div class="download-container">
-  <img src="https://raw.githubusercontent.com/sdnegericimapag/ku/main/img/logocimapag1.png" alt="Logo SD">
-  
-  <a href="https://raw.githubusercontent.com/sdnegericimapag/ku/main/img/logocimapag1.png" 
-     download
-     class="download-btn">
+    <div class="logo-section">
+  <img src="https://raw.githubusercontent.com/sdnegericimapag/ku/main/img/logocimapag1.png" alt="Logo SD Negeri Cimapag">
+
+  <a href="https://github.com/sdnegericimapag/ku/raw/main/img/logocimapag1.png" download class="btn-download">
     <i class="fa-solid fa-download"></i> Download Gambar
   </a>
 </div>
@@ -219,6 +222,7 @@
 
 </body>
 </html>
+
 
 
 
