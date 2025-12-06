@@ -491,7 +491,7 @@ p {
    =========================== */
 .footer-top {
   width: 100%;
-  background-color: #0093C4;   /* biru lebih gelap dari footer */
+  background-color: #EBFAFF;   /* biru lebih gelap dari footer */
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -654,6 +654,7 @@ p {
     height: 180px;
   }
 }
+
 
 
 
