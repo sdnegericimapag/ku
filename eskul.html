@@ -27,6 +27,20 @@
       flex: 1;
     }
 
+    .image-row {
+    display: flex;
+    gap: 20px;          /* jarak antar gambar */
+    margin-top: 20px;
+}
+
+.image-row img {
+    width: 300px;       /* atur ukuran sesuai kebutuhan */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
   </style>
 </head>
 
@@ -100,7 +114,13 @@
       membentuk generasi muda yang berakhlak mulia, cerdas, dan siap menghadapi tantangan masa depan.
   </p>
   <!-- Gambar -->
-  <img src="poto/pramuka1.jpeg" class="center-image" width="200">
+  <div class="image-row">
+    <img src="poto/pramuka1.jpeg" alt="Pramuka 1">
+    <img src="poto/pramuka2.jpeg" alt="Pramuka 2">
+    <img src="poto/pramuka3.jpeg" alt="Pramuka 3">
+    <img src="poto/pramuka4.jpeg" alt="Pramuka 4">
+</div>
+ /*--<img src="poto/pramuka1.jpeg" class="center-image" width="200"> --*/
 </div>
   <div class="container">
   <h1>🎯 MISI SD NEGERI CIMAPAG</h1>
@@ -172,6 +192,7 @@
   
 </body>
 </html>
+
 
 
 
