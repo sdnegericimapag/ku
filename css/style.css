@@ -508,7 +508,7 @@ p {
    JUDUL KOLOM
    ================================ */
 .footer-column h3 {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 10px;
     color: #fff;
     position: relative;
@@ -519,8 +519,8 @@ p {
 .footer-column h3::after {
     content: "";
     display: block;
-    width: 120px;            /* panjang garis */
-    height: 3px;             /* tebal garis */
+    width: 150px;            /* panjang garis */
+    height: 2px;             /* tebal garis */
     margin-top: 5px;
     background: linear-gradient(to right, #000, #fff);
     border-radius: 2px;
@@ -534,17 +534,20 @@ p {
     display: flex;
     align-items: flex-start;
     margin-bottom: 8px;
+    font-size: 13px;
 }
 
 .footer-location i {
     margin-right: 8px;
     margin-top: 4px;
     color: #fff;
+    font-size: 13px;
 }
 
 .footer-column p {
     margin: 5px 0;
     color: #fff;
+    font-size: 14px;
 }
 
 /* ================================
@@ -558,6 +561,7 @@ p {
     border-radius: 8px;
     color: #fff;
     transition: 0.3s ease;
+    font-size: 13px;
 }
 
 .tags a span:hover {
@@ -676,6 +680,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
