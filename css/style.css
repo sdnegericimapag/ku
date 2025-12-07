@@ -482,119 +482,146 @@ p {
     transform: translateX(3px);
 }
 
-/* ======================================================= 
-   FOOTER UTAMA 
-======================================================= */ 
-.custom-footer { 
-   background: #00a8e8; /* warna dasar footer, bisa diubah */ 
-   padding: 40px 0 0 0; /* jarak atas footer */ 
-   color: #fff; font-family: Arial, sans-serif; 
-} 
-/* ================================ 
-CONTAINER UTAMA 3 KOLOM 
-================================ */ 
-.footer-container { 
-   display: grid; 
-   grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */ 
-   gap: 50px; /* jarak antar kolom */ 
-   max-width: 1200px; /* batas lebar footer */ 
-   margin: auto; /* biar center */ 
-   padding: 0 40px; /* jarak kiri kanan halaman */ 
-} 
-/* ================================ 
-   JUDUL KOLOM 
-================================ */ 
-.footer-column h3 { 
-   font-size: 16px; 
-   margin-bottom: 10px; 
-   color: black; 
-   position: relative; padding-bottom: 6px; 
+/* =======================================================
+   FOOTER UTAMA
+   ======================================================= */
+.custom-footer {
+    background: #00a8e8; /* warna dasar footer, bisa diubah */
+    padding: 40px 0 0 0; /* jarak atas footer */
+    color: #fff;
+    font-family: Arial, sans-serif;
 }
-/* --- Garis bawah judul — gradient hitam → putih --- */ 
-.footer-column h3::after { 
-   content: ""; display: block; width: 150px; /* panjang garis */ 
-   height: 2px; /* tebal garis */ 
-   margin-top: 5px; 
-   background: linear-gradient(to right, #000, #fff); 
-   border-radius: 2px; 
-} 
-/* ================================ 
-KOLOM 1 — HUBUNGI KAMI 
-================================ */ 
-.footer-location { 
-   display: flex; align-items: 
-   flex-start; margin-bottom: 8px; 
-   font-size: 13px; 
-} 
-.footer-location i { 
-   margin-right: 8px; 
-   margin-top: 4px; 
-   color: #fff; 
-   font-size: 13px; 
-} 
-.footer-column p { 
-   margin: 5px 0; 
-   color: #fff; 
-   font-size: 14px; 
-} 
-/* ================================ 
-KOLOM 2 — TAGS 
-================================ */ 
-.tags a span { 
-   display: inline-block; 
-   padding: 4px 4px; 
-   margin: 5px; 
-   border: 2px solid #fff; /* outline putih */ 
-   border-radius: 1px; 
-   color: #fff; transition: 0.3s ease; font-size: 13px; 
-} 
-.tags a span:hover { 
-   background:#; /* hover warna emas */ 
-   border-color: gold; color: #000; /* teks hitam biar kontras */ 
-} 
-/* ================================ 
-KOLOM 3 — IKUTI KAMI 
-================================ */ 
-.social-icons { 
-   display: flex; gap: 12px; 
-   margin-top: 10px; 
-} 
-.social-icons img { 
-   width: 32px; 
-   height: 32px; 
-   transition: 0.3s; 
-} 
-.social-icons img:hover { 
-   transform: scale(1.1); 
-} 
-/* ======================================================= 
-BOTTOM BAR 1 — ISI GAMBAR KEKANAN 
-======================================================= */ 
-.footer-bottom-bar1 { 
-   max-width: 1200px; 
-   margin: 40px auto 20px auto; /* jarak dari kolom ke bottom bar */ 
-   padding: 0 40px; /* jarak kiri kanan tidak mepet */ 
-} 
-.footer-bottom-images { 
-   display: flex; gap: 20px; /* jarak antar gambar */ 
-   flex-wrap: nowrap; justify-content: center; } 
-.footer-bottom-images img { 
-   width: 150px; height: auto; /* tinggi otomatis */ 
-   border-radius: 8px; 
-} 
-/* ======================================================= 
-BOTTOM BAR 2 — COPYRIGHT 
-======================================================= */ 
-.footer-bottom { 
-   background: #008fcc; /* warna bar bawah */ 
-   text-align: center; 
-   padding: 15px 20px; 
-   margin-top: 10px; /* Jarak antar bottom bar 1 */ 
-   color: #fff; font-size: 14px; 
-} 
-.footer-bottom .footer-school { 
-   color: gold; /* warna kuning */ 
-   font-weight: bold; /* tebal */ }
+
+/* ================================
+   CONTAINER UTAMA 3 KOLOM
+   ================================ */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */
+    gap: 50px;                 /* jarak antar kolom */
+    max-width: 1200px;         /* batas lebar footer */
+    margin: auto;              /* biar center */
+    padding: 0 40px;           /* jarak kiri kanan halaman */
+}
+
+/* ================================
+   JUDUL KOLOM
+   ================================ */
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+/* --- Garis bawah judul — gradient hitam → putih --- */
+.footer-column h3::after {
+    content: "";
+    display: block;
+    width: 120px;            /* panjang garis */
+    height: 3px;             /* tebal garis */
+    margin-top: 5px;
+    background: linear-gradient(to right, #000, #fff);
+    border-radius: 2px;
+}
+
+/* ================================
+   KOLOM 1 — HUBUNGI KAMI
+   ================================ */
+
+.footer-location {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.footer-location i {
+    margin-right: 8px;
+    margin-top: 4px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+/* ================================
+   KOLOM 2 — TAGS
+   ================================ */
+.tags a span {
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 5px;
+    border: 2px solid #fff;   /* outline putih */
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.tags a span:hover {
+    background: gold;         /* hover warna emas */
+    border-color: gold;
+    color: #000;              /* teks hitam biar kontras */
+}
+
+/* ================================
+   KOLOM 3 — IKUTI KAMI
+   ================================ */
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* =======================================================
+   BOTTOM BAR 1 — ISI GAMBAR KEKANAN
+   ======================================================= */
+.footer-bottom-bar1 {
+    max-width: 1200px;
+    margin: 40px auto 20px auto; /* jarak dari kolom ke bottom bar */
+    padding: 0 40px;             /* jarak kiri kanan tidak mepet */
+}
+
+.footer-bottom-images {
+    display: flex;
+    gap: 20px;                   /* jarak antar gambar */
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.footer-bottom-images img {
+    width: 150px;
+    height: auto;                /* tinggi otomatis */
+    border-radius: 8px;
+}
+
+/* =======================================================
+   BOTTOM BAR 2 — COPYRIGHT
+   ======================================================= */
+.footer-bottom {
+    background: #008fcc;         /* warna bar bawah */
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 10px;            /* Jarak antar bottom bar 1 */
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-bottom .footer-school {
+    color: gold;                 /* warna kuning */
+    font-weight: bold;           /* tebal */
+}
 
 /* =======================================================
    RESPONSIVE MOBILE
@@ -621,10 +648,6 @@ BOTTOM BAR 2 — COPYRIGHT
 }
 
 
-
-
-
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .artikel-card {
@@ -647,6 +670,7 @@ BOTTOM BAR 2 — COPYRIGHT
     height: 60px;
   }
 }
+
 
 
 
