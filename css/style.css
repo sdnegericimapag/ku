@@ -635,7 +635,8 @@ p {
     margin-top: 10px;
     color: #fff;
     font-size: 14px;
-    width: 1180px;
+    font-style:italic;
+    
 }
 
 .footer-bottom .footer-school {
@@ -691,6 +692,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
