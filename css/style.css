@@ -482,132 +482,171 @@ p {
     transform: translateX(3px);
 }
 
-/* ========================== */
-/*          FOOTER            */
-/* ========================== */
+/* =======================================================
+   FOOTER UTAMA
+   ======================================================= */
 .custom-footer {
-  background-color: #00AEEF;      /* Warna biru utama */
-  color: white;
-  padding: 20px 20px;
-  font-family: Arial, sans-serif; /* Ubah font di sini */
+    background: #00a8e8; /* warna dasar footer, bisa diubah */
+    padding: 40px 0 0 0; /* jarak atas footer */
+    color: #fff;
+    font-family: Arial, sans-serif;
 }
 
-/* Container kolom */
-.custom-footer .footer-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
+/* ================================
+   CONTAINER UTAMA 3 KOLOM
+   ================================ */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */
+    gap: 50px;                 /* jarak antar kolom */
+    max-width: 1200px;         /* batas lebar footer */
+    margin: auto;              /* biar center */
+    padding: 0 40px;           /* jarak kiri kanan halaman */
 }
 
-/* Kolom */
-.custom-footer .footer-column {
-  flex: 1;
-  min-width: 260px;
+/* ================================
+   JUDUL KOLOM
+   ================================ */
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 6px;
 }
 
-/* Judul Kolom */
-.custom-footer .footer-column h3 {
-  font-size: 16px;                /* ukuran judul */
-  margin-bottom: 12px;
-  position: relative;
-  padding-bottom: 5px;
+/* --- Garis bawah judul — gradient hitam → putih --- */
+.footer-column h3::after {
+    content: "";
+    display: block;
+    width: 120px;            /* panjang garis */
+    height: 3px;             /* tebal garis */
+    margin-top: 5px;
+    background: linear-gradient(to right, #000, #fff);
+    border-radius: 2px;
 }
 
-/* Garis bawah judul */
-.custom-footer .footer-column h3::after {
-  content: "";
-  display: block;
-  width: 150px;
-  height: 2px;
-  background: linear-gradient(to right, white, #0070C0);
-  margin-top: 5px;
+/* ================================
+   KOLOM 1 — HUBUNGI KAMI
+   ================================ */
+
+.footer-location {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
 }
 
-/* Isi kolom */
-.custom-footer p, 
-.custom-footer span {
-  color: white;                   /* semua kolom putih */
-  font-size: 13px;                /* ukuran teks */
+.footer-location i {
+    margin-right: 8px;
+    margin-top: 4px;
 }
 
-/* Ikon */
-.custom-footer i {
-  margin-right: 8px;
+.footer-column p {
+    margin: 5px 0;
 }
 
-/* Lokasi */
-.custom-footer .footer-location {
-  display: grid;
-  grid-template-columns: 18px auto;
-  margin: 6px 0;
+/* ================================
+   KOLOM 2 — TAGS
+   ================================ */
+.tags a span {
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 5px;
+    border: 2px solid #fff;   /* outline putih */
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s ease;
 }
 
-.custom-footer .footer-address {
-  margin-top: 2px;
+.tags a span:hover {
+    background: gold;         /* hover warna emas */
+    border-color: gold;
+    color: #000;              /* teks hitam biar kontras */
 }
 
-/* TAGS */
-.custom-footer .tags span {
-  display: inline-block;
-  border: 1px solid white;
-  padding: 6px 12px;
-  margin: 5px 5px 0 0;
-  font-size: 13px;
-  cursor: pointer;
-  transition: 0.3s;
+/* ================================
+   KOLOM 3 — IKUTI KAMI
+   ================================ */
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
 }
 
-.custom-footer .tags span:hover {
-  color: #FFD700;
-  border-color: #FFD700;
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
 }
 
-/* SOSIAL MEDIA ICON */
-.custom-footer .social-icons a img {
-  width: 35px;   /* ubah ukuran icon */
-  height: 35px;
-  margin-right: 10px;
+.social-icons img:hover {
+    transform: scale(1.1);
 }
 
-/* Hapus garis bawah pada semua link di footer */
-.custom-footer a {
-  text-decoration: none !important;
+/* =======================================================
+   BOTTOM BAR 1 — ISI GAMBAR KEKANAN
+   ======================================================= */
+.footer-bottom-bar1 {
+    max-width: 1200px;
+    margin: 40px auto 20px auto; /* jarak dari kolom ke bottom bar */
+    padding: 0 40px;             /* jarak kiri kanan tidak mepet */
 }
 
-/* Khusus social icon biar bersih */
-.custom-footer .social-icons a {
-  text-decoration: none !important;
-  border: none;
-  outline: none;
+.footer-bottom-images {
+    display: flex;
+    gap: 20px;                   /* jarak antar gambar */
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-.custom-footer .social-icons img {
-  display: inline-block;
-  border: none;
-  outline: none;
+.footer-bottom-images img {
+    width: 150px;
+    height: auto;                /* tinggi otomatis */
+    border-radius: 8px;
 }
 
-
-/* COPYRIGHT */
-.custom-footer .footer-bottom {
-  margin-top: 35px;
-  background-color: #00688B; /* warna strip bawah */
-  text-align: center;
-  padding: 8px 0;
-  font-size: 14px;
-  font-style: italic;
-  color: black;              /* default: hitam */
+/* =======================================================
+   BOTTOM BAR 2 — COPYRIGHT
+   ======================================================= */
+.footer-bottom {
+    background: #008fcc;         /* warna bar bawah */
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 10px;            /* Jarak antar bottom bar 1 */
+    color: #fff;
+    font-size: 14px;
 }
 
-
-/* SD NegerI Cimapag putih */
-.custom-footer .footer-bottom .footer-school {
-  color: white;
-  font-weight: bold;
+.footer-bottom .footer-school {
+    color: gold;                 /* warna kuning */
+    font-weight: bold;           /* tebal */
 }
+
+/* =======================================================
+   RESPONSIVE MOBILE
+   ======================================================= */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* jadi 1 kolom */
+        text-align: center;
+    }
+
+    .footer-column h3::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom-images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 
 
 
@@ -635,6 +674,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
