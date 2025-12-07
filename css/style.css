@@ -482,152 +482,133 @@ p {
     transform: translateX(3px);
 }
 
-/* =========================================================
-   9. FOOTER
-   ========================================================= */
-
-/* ===========================
-   FOOTER TOP (BAR ATAS)
-   =========================== */
-.footer-top {
-  width: 100%;
-  background-color: #EBFAFF;
-  padding: 10px 0;
-}
-
-/* ===========================
-   FOOTER MAIN
-   =========================== */
+/* ========================== */
+/*          FOOTER            */
+/* ========================== */
 .custom-footer {
-  background-color: #00B0F0;
+  background-color: #00AEEF;      /* Warna biru utama */
   color: white;
-  padding: 40px 20px 20px;
+  padding: 20px 20px;
+  font-family: Arial, sans-serif; /* Ubah font di sini */
 }
 
-/* WRAPPER UTAMA FOOTER */
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 kolom seimbang */
-    gap: 40px; /* jarak antar kolom */
-    padding: 40px 60px; /* jarak kiri-kanan footer */
-    align-items: start;
+/* Container kolom */
+.custom-footer .footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-
-/* ===========================
-   KOLOM FOOTER
-   =========================== */
-.footer-column {
-    min-width: 220px; /* supaya kolom tidak terlalu kecil */
+/* Kolom */
+.custom-footer .footer-column {
+  flex: 1;
+  min-width: 260px;
 }
 
-.footer h3 {
-    margin-bottom: 15px;
+/* Judul Kolom */
+.custom-footer .footer-column h3 {
+  font-size: 16px;                /* ukuran judul */
+  margin-bottom: 12px;
+  position: relative;
+  padding-bottom: 5px;
 }
 
-
-/* garis heading */
-.footer-column h3::after {
+/* Garis bawah judul */
+.custom-footer .footer-column h3::after {
   content: "";
   display: block;
-  width: 160px;
+  width: 150px;
   height: 2px;
-  background: linear-gradient(to right, #ffffff, #000000);
+  background: linear-gradient(to right, white, #0070C0);
   margin-top: 5px;
 }
 
-.footer-column p {
-  font-size: 13px;
+/* Isi kolom */
+.custom-footer p, 
+.custom-footer span {
+  color: white;                   /* semua kolom putih */
+  font-size: 13px;                /* ukuran teks */
+}
+
+/* Ikon */
+.custom-footer i {
+  margin-right: 8px;
+}
+
+/* Lokasi */
+.custom-footer .footer-location {
+  display: grid;
+  grid-template-columns: 18px auto;
   margin: 6px 0;
 }
 
-/* ===========================
-   ALAMAT
-   =========================== */
-.footer-location {
-  display: grid;
-  grid-template-columns: 18px auto;
-  gap: 6px;
-  align-items: flex-start;
+.custom-footer .footer-address {
+  margin-top: 2px;
 }
 
-.footer-address {
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-/* ===========================
-   TAGS
-   =========================== */
-.tags a span {
+/* TAGS */
+.custom-footer .tags span {
   display: inline-block;
   border: 1px solid white;
   padding: 6px 12px;
   margin: 5px 5px 0 0;
   font-size: 13px;
-  transition: 0.3s ease;
-  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.tags a:hover span {
-  background: white;
-  color: #00B0F0;
-  transform: translateY(-2px);
+.custom-footer .tags span:hover {
+  color: #FFD700;
+  border-color: #FFD700;
 }
 
-/* ===========================
-   SOSIAL MEDIA
-   =========================== */
-.social-icons a img {
-  width: 28px;
-  height: 28px;
+/* SOSIAL MEDIA ICON */
+.custom-footer .social-icons a img {
+  width: 35px;   /* ubah ukuran icon */
+  height: 35px;
   margin-right: 10px;
-  transition: 0.2s ease;
 }
 
-.social-icons a img:hover {
-  transform: scale(1.12);
+/* Hapus garis bawah pada semua link di footer */
+.custom-footer a {
+  text-decoration: none !important;
 }
 
-/* ===========================
-   GALERI ICON
-   =========================== */
-.footer-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+/* Khusus social icon biar bersih */
+.custom-footer .social-icons a {
+  text-decoration: none !important;
+  border: none;
+  outline: none;
 }
 
-.footer-gallery img {
-  width: 55px;
-  height: 55px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 2px solid white;
-  background: #008ac1; /* fallback jika gambar fail load */
-  transition: 0.25s ease;
+.custom-footer .social-icons img {
+  display: inline-block;
+  border: none;
+  outline: none;
 }
 
-.footer-gallery img:hover {
-  transform: scale(1.08);
-}
 
-/* ===========================
-   COPYRIGHT
-   =========================== */
-.footer-bottom {
-  margin-top: 30px;
-  background-color: #00759E;
+/* COPYRIGHT */
+.custom-footer .footer-bottom {
+  margin-top: 35px;
+  background-color: #00688B; /* warna strip bawah */
   text-align: center;
-  padding: 15px;
-  font-size: 12px;
+  padding: 8px 0;
+  font-size: 14px;
   font-style: italic;
-  color: white;
+  color: black;              /* default: hitam */
 }
 
-.footer-bottom .footer-school {
+
+/* SD NegerI Cimapag putih */
+.custom-footer .footer-bottom .footer-school {
+  color: white;
   font-weight: bold;
 }
+
 
 
 
@@ -654,6 +635,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
