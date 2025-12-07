@@ -28,7 +28,20 @@
       flex: 1;
     }
 
- 
+ a.selengkapnya {
+  color: #0066cc;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;     /* animasi lembut */
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+a.selengkapnya:hover {
+  color: #003399;            /* biru lebih gelap saat hover */
+  border-bottom: 2px solid #003399;
+}
+
 
   </style>
 </head>
@@ -120,7 +133,7 @@
       <h3>SD Negeri Cimapag Dalama Rangka Memperingati Hari Guru Yang Ke 80</h3>
       <p>Dalam rangka memperingati Hari Guru Nasional yang ke-80, SD Negeri Cimapag dengan bangga menyelenggarakan 
         serangkaian kegiatan sebagai bentuk penghormatan dan apresiasi kepada para pahlawan tanpa tanda jasa. 
-        Pada momentum istimewa ini, ... <a href="sekilasinfo.html#konten-hut-pgri">Selengkapnya</a></p>
+        Pada momentum istimewa ini, ... <a href="#konten-hut-pgri" class="selengkapnya">Selengkapnya</a></p>
       
     </div>
     
@@ -220,6 +233,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
