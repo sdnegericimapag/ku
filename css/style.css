@@ -494,7 +494,8 @@ p {
 CONTAINER UTAMA 3 KOLOM 
 ================================ */ 
 .footer-container { 
-   display: grid; grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */ 
+   display: grid; 
+   grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */ 
    gap: 50px; /* jarak antar kolom */ 
    max-width: 1200px; /* batas lebar footer */ 
    margin: auto; /* biar center */ 
@@ -646,6 +647,7 @@ BOTTOM BAR 2 — COPYRIGHT
     height: 60px;
   }
 }
+
 
 
 
