@@ -486,94 +486,90 @@ p {
    FOOTER UTAMA
    ======================================================= */
 .custom-footer {
-    background: #00a8e8; /* warna dasar footer, bisa diubah */
-    padding: 40px 0 0 0; /* jarak atas footer */
+    background: #00a8e8;
+    padding: 40px 0 0 0;
     color: #fff;
     font-family: Arial, sans-serif;
 }
 
-/* ================================
-   CONTAINER UTAMA 3 KOLOM
-   ================================ */
+/* =======================================================
+   GRID 4 KOLOM (Hubungi Kami – Tags – Ikuti Kami – Layanan)
+   ======================================================= */
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */
-    gap: 50px;                 /* jarak antar kolom */
-    max-width: 1200px;         /* batas lebar footer */
-    margin: auto;              /* biar center */
-    padding: 0 40px;           /* jarak kiri kanan halaman */
+    grid-template-columns: repeat(4, 1fr);   /* 4 kolom */
+    gap: 45px;                                /* jarak antar kolom */
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;                          /* jarak kiri-kanan halaman */
 }
 
-/* ================================
+/* =======================================================
    JUDUL KOLOM
-   ================================ */
+   ======================================================= */
 .footer-column h3 {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: black;
     position: relative;
     padding-bottom: 6px;
 }
 
-/* --- Garis bawah judul — gradient hitam → putih --- */
 .footer-column h3::after {
     content: "";
     display: block;
-    width: 150px;            /* panjang garis */
-    height: 2px;             /* tebal garis */
+    width: 150px;
+    height: 2px;
     margin-top: 5px;
     background: linear-gradient(to right, #000, #fff);
     border-radius: 2px;
 }
 
-/* ================================
-   KOLOM 1 — HUBUNGI KAMI
-   ================================ */
+/* =======================================================
+   KOLOM 1 – HUBUNGI KAMI
+   ======================================================= */
+.footer-column p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #fff;
+}
 
 .footer-location {
     display: flex;
     align-items: flex-start;
     margin-bottom: 8px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .footer-location i {
     margin-right: 8px;
-    margin-top: 4px;
-    color: #fff;
-    font-size: 13px;
-}
-
-.footer-column p {
-    margin: 5px 0;
-    color: #fff;
+    margin-top: 3px;
     font-size: 14px;
 }
 
-/* ================================
-   KOLOM 2 — TAGS
-   ================================ */
+/* =======================================================
+   KOLOM 2 – TAGS
+   ======================================================= */
 .tags a span {
     display: inline-block;
-    padding: 4px 4px;
+    padding: 6px 14px;
     margin: 5px;
-    border: 2px solid #fff;   /* outline putih */
-    border-radius: 1px;
+    border: 2px solid #fff;
+    border-radius: 6px;
     color: #fff;
-    transition: 0.3s ease;
     font-size: 13px;
+    transition: 0.3s ease;
 }
 
 .tags a span:hover {
-    background:#;         /* hover warna emas */
+    background: gold;
     border-color: gold;
-    color: #000;              /* teks hitam biar kontras */
+    color: #000;
 }
 
-/* ================================
-   KOLOM 3 — IKUTI KAMI
-   ================================ */
-
+/* =======================================================
+   KOLOM 3 – IKUTI KAMI (Social Icons)
+   ======================================================= */
 .social-icons {
     display: flex;
     gap: 12px;
@@ -591,24 +587,40 @@ p {
 }
 
 /* =======================================================
-   BOTTOM BAR 1 — ISI GAMBAR KEKANAN
+   KOLOM 4 – LAYANAN (Baru)
+   ======================================================= */
+.services-list a {
+    display: block;
+    margin: 6px 0;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.services-list a:hover {
+    color: gold;
+}
+
+/* =======================================================
+   BOTTOM BAR 1 — Gambar Logo / Banner
    ======================================================= */
 .footer-bottom-bar1 {
     max-width: 1200px;
-    margin: 40px auto 20px auto; /* jarak dari kolom ke bottom bar */
-    padding: 0 40px;             /* jarak kiri kanan tidak mepet */
+    margin: 45px auto 25px auto; /* Jarak dari grid kolom */
+    padding: 0 40px;
 }
 
 .footer-bottom-images {
     display: flex;
-    gap: 20px;                   /* jarak antar gambar */
-    flex-wrap: nowrap;
+    gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-bottom-images img {
     width: 150px;
-    height: auto;                /* tinggi otomatis */
+    height: auto;
     border-radius: 8px;
 }
 
@@ -616,18 +628,19 @@ p {
    BOTTOM BAR 2 — COPYRIGHT
    ======================================================= */
 .footer-bottom {
-    background: #008fcc;         /* warna bar bawah */
+    background: #008fcc;
     text-align: center;
     padding: 15px 20px;
-    margin-top: 10px;            /* Jarak antar bottom bar 1 */
+    margin-top: 20px;   /* Jarak dari bar 1 */
     color: #fff;
     font-size: 14px;
 }
 
 .footer-bottom .footer-school {
-    color: gold;                 /* warna kuning */
-    font-weight: bold;           /* tebal */
+    color: gold;
+    font-weight: bold;
 }
+
 
 /* =======================================================
    RESPONSIVE MOBILE
@@ -680,6 +693,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
