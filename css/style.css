@@ -587,21 +587,7 @@ p {
     transform: scale(1.1);
 }
 
-/* =======================================================
-   KOLOM 4 – LAYANAN (Baru)
-   ======================================================= */
-.services-list a {
-    display: block;
-    margin: 6px 0;
-    font-size: 14px;
-    color: #fff;
-    transition: 0.3s;
-    text-decoration: none;
-}
 
-.services-list a:hover {
-    color: gold;
-}
 
 /* =======================================================
    BOTTOM BAR 1 — Gambar Logo / Banner
@@ -696,6 +682,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
