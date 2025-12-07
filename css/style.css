@@ -539,10 +539,12 @@ p {
 .footer-location i {
     margin-right: 8px;
     margin-top: 4px;
+    color: #fff;
 }
 
 .footer-column p {
     margin: 5px 0;
+    color: #fff;
 }
 
 /* ================================
@@ -674,6 +676,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
