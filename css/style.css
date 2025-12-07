@@ -492,175 +492,137 @@ p {
 .footer-top {
   width: 100%;
   background-color: #EBFAFF;
-  color: #004A6F;
-  text-align: center;
   padding: 10px 0;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 1px;
 }
 
 /* ===========================
-   FOOTER MAIN AREA
+   FOOTER MAIN
    =========================== */
 .custom-footer {
   background-color: #00B0F0;
   color: white;
-  padding: 50px 20px 30px; /* PERBAIKAN jarak */
+  padding: 40px 20px 20px;
 }
 
-/* FOOTER WRAPPER */
+/* WRAPPER UTAMA FOOTER */
 .footer-container {
   max-width: 1200px;
   margin: auto;
-  display: flex;
-  justify-content: space-between; /* PERBAIKAN */
-  flex-wrap: wrap;
-  gap: 35px; /* PERBAIKAN agar lebih rapi */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom seimbang */
+  gap: 40px; /* jarak antar kolom */
 }
 
 /* ===========================
-   SETIAP KOLOM FOOTER
+   KOLOM FOOTER
    =========================== */
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-}
-
-/* JUDUL KOLOM */
 .footer-column h3 {
-  margin-bottom: 12px;
   font-size: 18px;
-  font-weight: bold;
-  padding-bottom: 5px;
+  margin-bottom: 10px;
   position: relative;
+  padding-bottom: 6px;
 }
 
-/* Garis Judul */
+/* garis heading */
 .footer-column h3::after {
   content: "";
   display: block;
   width: 160px;
   height: 2px;
-  background: linear-gradient(to right, white, rgba(255,255,255,0.2));
+  background: linear-gradient(to right, #ffffff, #000000);
   margin-top: 5px;
 }
 
-/* TEXT */
 .footer-column p {
   font-size: 13px;
   margin: 6px 0;
-  line-height: 1.4; /* PERBAIKAN agar tidak rapat */
-}
-
-/* ICON JARAK */
-.footer-column i {
-  margin-right: 7px;
 }
 
 /* ===========================
-   TAG BOX
-   =========================== */
-.tags span {
-  display: inline-block;
-  border: 1px solid white;
-  padding: 6px 12px;
-  margin: 5px 8px 0 0;
-  font-size: 13px;
-  border-radius: 4px; /* PERBAIKAN */
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.tags a {
-  text-decoration: none;
-}
-
-.tags a:hover span {
-  color: #FFD500;
-  border-color: #FFD500;
-}
-
-/* ===========================
-   SOSIAL MEDIA ICON
-   =========================== */
-.social-icons a {
-  text-decoration: none;
-  margin-right: 10px;
-  display: inline-block;
-}
-
-.social-icons a img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-}
-
-.social-icons a img:hover {
-  transform: scale(1.15);
-}
-
-/* ===========================
-   GALERI ICON (KOLOM BARU)
-   =========================== */
-.footer-gallery h3 {
-  margin-bottom: 12px;
-  font-size: 18px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #FFD500;
-  width: fit-content;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 60px); /* PERBAIKAN ukuran */
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.gallery-grid img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 2px solid #fff;
-  transition: transform 0.25s ease;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.1);
-}
-
-/* ===========================
-   ALAMAT (ICON + TEKS)
+   ALAMAT
    =========================== */
 .footer-location {
   display: grid;
-  grid-template-columns: 20px auto;
+  grid-template-columns: 18px auto;
   gap: 6px;
+  align-items: flex-start;
 }
 
 .footer-address {
   font-size: 13px;
-  margin-top: 2px;
+  line-height: 1.4;
 }
 
 /* ===========================
-   COPYRIGHT SECTION
+   TAGS
+   =========================== */
+.tags a span {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 6px 12px;
+  margin: 5px 5px 0 0;
+  font-size: 13px;
+  transition: 0.3s ease;
+  border-radius: 6px;
+}
+
+.tags a:hover span {
+  background: white;
+  color: #00B0F0;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   SOSIAL MEDIA
+   =========================== */
+.social-icons a img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  transition: 0.2s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.12);
+}
+
+/* ===========================
+   GALERI ICON
+   =========================== */
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.footer-gallery img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid white;
+  background: #008ac1; /* fallback jika gambar fail load */
+  transition: 0.25s ease;
+}
+
+.footer-gallery img:hover {
+  transform: scale(1.08);
+}
+
+/* ===========================
+   COPYRIGHT
    =========================== */
 .footer-bottom {
   margin-top: 30px;
   background-color: #00759E;
   text-align: center;
-  padding: 14px;
+  padding: 15px;
   font-size: 12px;
   font-style: italic;
   color: white;
 }
 
-.footer-school {
-  color: #FFD500;
+.footer-bottom .footer-school {
   font-weight: bold;
 }
 
@@ -689,6 +651,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
