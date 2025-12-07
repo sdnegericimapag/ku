@@ -624,7 +624,7 @@ p {
 .footer-bottom {
     background: #008fcc;
     text-align: center;
-    padding: 15px 20px;
+    padding: 8px 0px;
     margin-top: 10px;
     color: #fff;
     font-size: 14px;
@@ -683,6 +683,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
