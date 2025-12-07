@@ -40,18 +40,28 @@
     object-fit: cover;
 }
 
+.daftar-kegiatan {
+  list-style: decimal;
+  padding-left: 20px;    /* jarak default angka ke teks */
+}
+
 .daftar-kegiatan li {
-  margin-bottom: 5px;
+  margin-bottom: 15px;   /* jarak antar item lebih rapi */
+}
+
+.daftar-kegiatan .judul {
+  font-weight: bold;     /* judul kegiatan tebal */
+  display: block;        /* biar 1 baris tersendiri */
+  margin-bottom: 4px;    /* jarak ke keterangan */
 }
 
 .daftar-kegiatan .ket {
-  margin-left: 0;       /* bisa ditambah 10px kalau mau menjorok */
-  margin-top: 0px;
-  font-style: italic;    /* biar miring */
-  color: #555;           /* warna lebih lembut */
+  margin-left: 0;        /* posisi sejajar */
+  margin-top: 0;
+  font-style: italic;    /* miring */
+  color: #555;           /* abu elegan */
+  line-height: 1.5;      /* spasi antar baris lebih enak dibaca */
 }
-
-
 
   </style>
 </head>
@@ -108,7 +118,6 @@
 
   <!-- CONTAINER TUNGGAL DI BAWAH SECTION DUA KOLOM -->
 <div class="container">
-  <ol class="daftar-kegiatan">
   <h1>Memperingati Hari Guru Nasional ke-80: Menghargai Dedikasi dan Pengabdian Guru</h1>
   <p> Dalam rangka memperingati Hari Guru Nasional yang ke-80, SD Negeri Cimapag dengan bangga menyelenggarakan 
     serangkaian kegiatan sebagai bentuk penghormatan dan apresiasi kepada para pahlawan tanpa tanda jasa. 
@@ -116,17 +125,17 @@
     dalam membimbing serta membentuk karakter generasi masa depan.
   </p>
   <p> Sebagai wujud penghargaan, sekolah mengadakan beberapa kegiatan khusus, di antaranya:</p>
-      <ol>
+       <ol class="daftar-kegiatan">
         <li>
-          <strong> Lomba Menyanyi Solo Antar Siswa</strong>
-             <div class="ket">"Untuk menumbuhkan keberanian, kreativitas, serta bakat seni peserta didik."</div>
+            <span class="judul"> Lomba Menyanyi Solo Antar Siswa</span>
+            <span class="ket">"Untuk menumbuhkan keberanian, kreativitas, serta bakat seni peserta didik."</span>
         </li>
         <li>
-          <strong> Lomba Membaca Puisi Antar Siswa</strong>
-             <div class="ket">"Sebagai sarana mengekspresikan rasa cinta dan hormat kepada guru melalui seni sastra."</div>
+            <span class="judul">Lomba Membaca Puisi Antar Siswa</span>
+            <span class="ket">"Sebagai sarana mengekspresikan rasa cinta dan hormat kepada guru melalui seni sastra."</span>
         <li>
-          <strong>Upacara Peringatan Hari Guru</strong>
-          <div class="ket">"Dengan petugas upacara seluruhnya berasal dari para guru, sebagai simbol dedikasi dan keteladanan yang terus diwariskan kepada murid-murid."</div>
+            <span class="judul">Upacara Peringatan Hari Guru</span>
+          <span class="ket">"Dengan petugas upacara seluruhnya berasal dari para guru, sebagai simbol dedikasi dan keteladanan yang terus diwariskan kepada murid-murid."</span>
         </li>
       </ol>
   <p> Melalui rangkaian kegiatan ini, diharapkan tumbuh rasa hormat, terima kasih, dan kebersamaan antara guru serta siswa.</p>
@@ -207,6 +216,7 @@
   
 </body>
 </html>
+
 
 
 
