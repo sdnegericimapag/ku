@@ -508,7 +508,7 @@ p {
    JUDUL KOLOM
    ================================ */
 .footer-column h3 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
     color: #fff;
     position: relative;
@@ -548,16 +548,16 @@ p {
    ================================ */
 .tags a span {
     display: inline-block;
-    padding: 6px 14px;
+    padding: 4px 4px;
     margin: 5px;
-    border: 2px solid #fff;
-    border-radius: 8px;
+    border: 1px solid #fff;
+    border-radius: 0px;
     color: #fff;
     transition: 0.3s ease;
 }
 
 .tags a span:hover {
-    background: gold;
+    background: ;
     border-color: gold;
     color: #000;
 }
@@ -587,7 +587,7 @@ p {
 .layanan-list a {
     display: block;
     margin: 6px 0;
-    font-size: 14px;
+    font-size: 13px;
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
@@ -613,7 +613,7 @@ p {
 }
 
 .footer-bottom-images img {
-    width: 150px;
+    width: 80px;
     height: auto;
     border-radius: 8px;
 }
@@ -683,6 +683,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
