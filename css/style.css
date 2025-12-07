@@ -486,22 +486,22 @@ p {
    FOOTER UTAMA
    ======================================================= */
 .custom-footer {
-    background: #00a8e8; /* warna dasar footer, bisa diubah */
-    padding: 40px 0 0 0; /* jarak atas footer */
+    background: #00a8e8;
+    padding: 40px 0 0 0;
     color: #fff;
     font-family: Arial, sans-serif;
 }
 
 /* ================================
-   CONTAINER UTAMA 3 KOLOM
+   CONTAINER UTAMA 4 KOLOM
    ================================ */
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */
-    gap: 50px;                 /* jarak antar kolom */
-    max-width: 1200px;         /* batas lebar footer */
-    margin: auto;              /* biar center */
-    padding: 0 40px;           /* jarak kiri kanan halaman */
+    grid-template-columns: repeat(4, 1fr); /* ← dari 3 kolom menjadi 4 kolom */
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
 }
 
 /* ================================
@@ -515,12 +515,11 @@ p {
     padding-bottom: 6px;
 }
 
-/* --- Garis bawah judul — gradient hitam → putih --- */
 .footer-column h3::after {
     content: "";
     display: block;
-    width: 120px;            /* panjang garis */
-    height: 3px;             /* tebal garis */
+    width: 120px;
+    height: 3px;
     margin-top: 5px;
     background: linear-gradient(to right, #000, #fff);
     border-radius: 2px;
@@ -529,7 +528,6 @@ p {
 /* ================================
    KOLOM 1 — HUBUNGI KAMI
    ================================ */
-
 .footer-location {
     display: flex;
     align-items: flex-start;
@@ -552,22 +550,21 @@ p {
     display: inline-block;
     padding: 6px 14px;
     margin: 5px;
-    border: 2px solid #fff;   /* outline putih */
+    border: 2px solid #fff;
     border-radius: 8px;
     color: #fff;
     transition: 0.3s ease;
 }
 
 .tags a span:hover {
-    background: gold;         /* hover warna emas */
+    background: gold;
     border-color: gold;
-    color: #000;              /* teks hitam biar kontras */
+    color: #000;
 }
 
 /* ================================
    KOLOM 3 — IKUTI KAMI
    ================================ */
-
 .social-icons {
     display: flex;
     gap: 12px;
@@ -584,25 +581,40 @@ p {
     transform: scale(1.1);
 }
 
+/* ================================
+   KOLOM 4 — LAYANAN (BARU)
+   ================================ */
+.layanan-list a {
+    display: block;
+    margin: 6px 0;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.layanan-list a:hover {
+    color: gold;
+}
+
 /* =======================================================
-   BOTTOM BAR 1 — ISI GAMBAR KEKANAN
+   BOTTOM BAR 1 — ISI GAMBAR KE KANAN
    ======================================================= */
 .footer-bottom-bar1 {
     max-width: 1200px;
-    margin: 40px auto 20px auto; /* jarak dari kolom ke bottom bar */
-    padding: 0 40px;             /* jarak kiri kanan tidak mepet */
+    margin: 40px auto 20px auto;
+    padding: 0 40px;
 }
 
 .footer-bottom-images {
     display: flex;
-    gap: 20px;                   /* jarak antar gambar */
-    flex-wrap: nowrap;
+    gap: 20px;
     justify-content: center;
 }
 
 .footer-bottom-images img {
     width: 150px;
-    height: auto;                /* tinggi otomatis */
+    height: auto;
     border-radius: 8px;
 }
 
@@ -610,18 +622,19 @@ p {
    BOTTOM BAR 2 — COPYRIGHT
    ======================================================= */
 .footer-bottom {
-    background: #008fcc;         /* warna bar bawah */
+    background: #008fcc;
     text-align: center;
     padding: 15px 20px;
-    margin-top: 10px;            /* Jarak antar bottom bar 1 */
+    margin-top: 10px;
     color: #fff;
     font-size: 14px;
 }
 
 .footer-bottom .footer-school {
-    color: gold;                 /* warna kuning */
-    font-weight: bold;           /* tebal */
+    color: gold;
+    font-weight: bold;
 }
+
 
 /* =======================================================
    RESPONSIVE MOBILE
@@ -670,6 +683,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
