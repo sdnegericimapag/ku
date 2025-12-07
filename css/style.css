@@ -606,7 +606,7 @@ p {
    BOTTOM BAR 1 — Gambar Logo / Banner
    ======================================================= */
 .footer-bottom-bar1 {
-    max-width: 1116px;
+    max-width: 1180px;
     margin: 45px auto 25px auto; /* Jarak dari grid kolom */
     padding: 0 40px;
     background: #EBFAFF;
@@ -620,7 +620,7 @@ p {
 }
 
 .footer-bottom-images img {
-    width: 100px;
+    width: 80px;
     height: auto;
     border-radius: 8px;
 }
@@ -632,9 +632,10 @@ p {
     background: #008fcc;
     text-align: center;
     padding: 15px 20px;
-    margin-top: 20px;   /* Jarak dari bar 1 */
+    margin-top: 10px;   /* Jarak dari bar 1 */
     color: #fff;
     font-size: 14px;
+    max-width: 1180px;
 }
 
 .footer-bottom .footer-school {
@@ -694,6 +695,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
