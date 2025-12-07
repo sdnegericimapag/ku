@@ -487,12 +487,12 @@ p {
    ========================================================= */
 
 /* ===========================
-   FOOTER TOP (BAR ATAS FOOTER)
+   FOOTER TOP (BAR ATAS)
    =========================== */
 .footer-top {
   width: 100%;
-  background-color: #EBFAFF;   /* biru lebih gelap dari footer */
-  color: white;
+  background-color: #EBFAFF;
+  color: #004A6F;
   text-align: center;
   padding: 10px 0;
   font-size: 15px;
@@ -504,9 +504,9 @@ p {
    FOOTER MAIN AREA
    =========================== */
 .custom-footer {
-  background-color: #00B0F0;  /* Biru langit terang */
-  color: white !important;
-  padding: 40px 20px 20px;
+  background-color: #00B0F0;
+  color: white;
+  padding: 50px 20px 30px; /* PERBAIKAN jarak */
 }
 
 /* FOOTER WRAPPER */
@@ -514,10 +514,9 @@ p {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* PERBAIKAN */
   flex-wrap: wrap;
-  gap: 30px;
-  color: white !important;
+  gap: 35px; /* PERBAIKAN agar lebih rapi */
 }
 
 /* ===========================
@@ -526,16 +525,15 @@ p {
 .footer-column {
   flex: 1;
   min-width: 250px;
-  color: white !important;
 }
 
 /* JUDUL KOLOM */
 .footer-column h3 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5px;
   position: relative;
-  padding-bottom: 6px;
-  color: white !important;
 }
 
 /* Garis Judul */
@@ -544,15 +542,15 @@ p {
   display: block;
   width: 160px;
   height: 2px;
-  background: linear-gradient(to right, white 0%, black 100%);
+  background: linear-gradient(to right, white, rgba(255,255,255,0.2));
   margin-top: 5px;
 }
 
-/* TEXT PARAGRAPH */
+/* TEXT */
 .footer-column p {
-  color: white !important;
   font-size: 13px;
   margin: 6px 0;
+  line-height: 1.4; /* PERBAIKAN agar tidak rapat */
 }
 
 /* ICON JARAK */
@@ -566,11 +564,11 @@ p {
 .tags span {
   display: inline-block;
   border: 1px solid white;
-  padding: 5px 10px;
-  margin: 5px 5px 0 0;
+  padding: 6px 12px;
+  margin: 5px 8px 0 0;
   font-size: 13px;
+  border-radius: 4px; /* PERBAIKAN */
   cursor: pointer;
-  color: white;
   transition: 0.3s;
 }
 
@@ -579,7 +577,8 @@ p {
 }
 
 .tags a:hover span {
-  color: #FFD500; /* Kuning saat hover */
+  color: #FFD500;
+  border-color: #FFD500;
 }
 
 /* ===========================
@@ -592,86 +591,78 @@ p {
 }
 
 .social-icons a img {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
+  transition: transform 0.2s ease;
 }
+
+.social-icons a img:hover {
+  transform: scale(1.15);
+}
+
 /* ===========================
-   LOGO ICON
+   GALERI ICON (KOLOM BARU)
    =========================== */
 .footer-gallery h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #fff;
-  border-bottom: 3px solid #ffd700;
+  margin-bottom: 12px;
+  font-size: 18px;
   padding-bottom: 5px;
-  width: fit-content; 
+  border-bottom: 2px solid #FFD500;
+  width: fit-content;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 70px);
-  gap: 8px;
+  grid-template-columns: repeat(3, 60px); /* PERBAIKAN ukuran */
+  gap: 10px;
   margin-top: 10px;
 }
 
 .gallery-grid img {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 6px;
   border: 2px solid #fff;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
-
-
 /* ===========================
-   PERATAAN ALAMAT (ICON + TEKS)
+   ALAMAT (ICON + TEKS)
    =========================== */
 .footer-location {
   display: grid;
-  grid-template-columns: 18px auto;
-  gap: 5px;
-  color: white !important;
+  grid-template-columns: 20px auto;
+  gap: 6px;
 }
 
 .footer-address {
   font-size: 13px;
-  display: block;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 /* ===========================
    COPYRIGHT SECTION
    =========================== */
 .footer-bottom {
-  margin-top: 25px;
+  margin-top: 30px;
   background-color: #00759E;
   text-align: center;
-  padding: 15px;
+  padding: 14px;
   font-size: 12px;
   font-style: italic;
-  color: black !important;
+  color: white;
 }
 
-/* Nama Sekolah di Copyright */
-.footer-bottom .footer-school {
-  color: white !important;
+.footer-school {
+  color: #FFD500;
   font-weight: bold;
 }
-
-/* Class tambahan */
-.school-red {
-  color: red;
-  font-weight: bold;
-}
-
-
 
 
 
@@ -698,6 +689,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
