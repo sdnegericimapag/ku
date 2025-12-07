@@ -555,17 +555,17 @@ p {
    ================================ */
 .tags a span {
     display: inline-block;
-    padding: 6px 14px;
+    padding: 4px 4px;
     margin: 5px;
     border: 2px solid #fff;   /* outline putih */
-    border-radius: 8px;
+    border-radius: 1px;
     color: #fff;
     transition: 0.3s ease;
     font-size: 13px;
 }
 
 .tags a span:hover {
-    background: gold;         /* hover warna emas */
+    background:#;         /* hover warna emas */
     border-color: gold;
     color: #000;              /* teks hitam biar kontras */
 }
@@ -680,6 +680,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
