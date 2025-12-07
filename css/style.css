@@ -566,9 +566,6 @@ p {
     border-color: gold;
     color: #000;
 }
-.ikuti-kami {
-    padding-left: 25px; /* geser sedikit ke kanan */
-}
 
 
 /* =======================================================
@@ -699,6 +696,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
