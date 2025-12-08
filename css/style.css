@@ -609,7 +609,7 @@ p {
    ======================================================= */
 .footer-bottom-bar1 {
     max-width: 1200px;
-    margin: 40px auto 5px auto;
+    margin: 40px auto 10px auto;
     padding: 0 40px;
     background: #EBFAFF;
 }
@@ -696,6 +696,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
