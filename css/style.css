@@ -648,6 +648,61 @@ p {
     font-weight: bold;
 }
 
+/* ===== POPUP ===== */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+    background: #fff;
+    width: 92%;
+    max-width: 450px;
+    margin: 8% auto;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn .3s;
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.popup-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #008fcc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+@keyframes fadeIn {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+
+
+
 
 /* =======================================================
    RESPONSIVE MOBILE
@@ -696,6 +751,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
