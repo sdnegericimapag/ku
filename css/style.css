@@ -630,7 +630,7 @@ p {
    BOTTOM BAR 2 — COPYRIGHT
    ======================================================= */
 .footer-bottom {
-    background: #008fcc;
+    background: #0078A2;
     text-align: center;
     padding: 5px 40px;
     margin-top: 0px;
@@ -696,6 +696,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
