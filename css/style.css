@@ -566,7 +566,7 @@ p {
 .tags a span:hover {
     background: ;
     border-color: gold;
-    color: #000;
+    color: gold;
 }
 
 /* ================================
@@ -611,6 +611,7 @@ p {
     max-width: 1200px;
     margin: 40px auto 20px auto;
     padding: 0 40px;
+    background: #EBFAFF;
 }
 
 .footer-bottom-images {
@@ -620,7 +621,7 @@ p {
 }
 
 .footer-bottom-images img {
-    width: 140px;
+    width: 110px;
     height: auto;
     border-radius: 8px;
 }
@@ -692,4 +693,5 @@ p {
     height: 60px;
   }
 }
+
 
