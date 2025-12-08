@@ -233,7 +233,8 @@
       <div class="tags">
         <a href="#"><span>PENGUMUMAN</span></a>
         <a href="sekilasinfo"><span>SEKILAS INFO</span></a>
-        <a href="#"><span>KEGIATAN TERBARU</span></a>
+        <a href="#" id="openPopup"><span>KEGIATAN TERBARU</span></a>
+
       </div>
     </div>
 
@@ -279,9 +280,30 @@
 
 </footer>
 
+  <div id="popup-modal" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+
+        <img src="img/kegiatan1.jpg" id="popup-gambar" alt="kegiatan terbaru">
+
+        <h2 id="popup-judul">Kegiatan Terbaru</h2>
+
+        <p id="popup-ringkasan">
+            Ini adalah ringkasan kegiatan terbaru dari Eskul / Perlombaan / Prestasi.
+        </p>
+
+        <a href="eskul.html" id="popup-link" class="popup-btn">
+            Buka Halaman Lengkap
+        </a>
+    </div>
+</div>
+
+  <script src="js/popup.js"></script>
+
   
 </body>
 </html>
+
 
 
 
