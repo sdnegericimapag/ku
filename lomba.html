@@ -27,6 +27,26 @@
       flex: 1;
     }
 
+    .container-kiri-kanan {
+    display: flex;
+    align-items: center;      /* gambar & teks sejajar tengah */
+    gap: 20px;                /* jarak antara gambar & teks */
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.container-kiri-kanan .gambar img {
+    width: 300px;             /* atur ukuran gambar */
+    height: auto;
+    border-radius: 10px;
+}
+
+.container-kiri-kanan .teks {
+    flex: 1;                  /* teks otomatis memenuhi ruang */
+    font-size: 16px;
+}
+
     
   </style>
 </head>
@@ -82,133 +102,35 @@
   </div>
 
  
-<!-- CONTAINER TABLE -->
-<div class="table-container">
+<!-- CONTAINER -->
+<div class="container-kiri-kanan">
+    <div class="gambar">
+        <img src="poto/rindu.jpg" alt="Gambar">
+    </div>
+
+    <div class="teks">
+        <h2>Kegiatan Festival Tunas Bahas Ibu Tingkat Kabupaten Sukabumi tahun 2025
+        </h2>
+        <h3>18 September 2025
+        </h3>
+        <p>
+            Cabang Lomba Maca Nulis Aksara Sunda
+            “Juara bukan hanya tentang piala, tapi tentang semangat, kerja keras, dan keberanian untuk tampil. 
+             Terima kasih atas perjuangan terbaik dari siswa-siswi SD Negeri Cimapag di Ajang Lomba Festival Tunas 
+             Bahasa Ibu (FTBI) tingkat kabupaten! Kalian luar biasa".
+        </p>
+        <p> Kami Segenap keluarga besar SD Negeri Cimapag menyampaikan apresiasi setinggi-tingginya kepada para 
+            siswa yang telah mewakili sekolah dalam lomba tingkat kabupaten. Meskipun belum meraih juara, semangat 
+            dan dedikasi kalian adalah kebanggaan kami. Teruslah belajar, berusaha, dan percaya bahwa setiap pengalaman 
+            adalah langkah menuju kesuksesan.” 
+        </p>
+    </div>
+</div>
+
+
+
   
-  <div style="
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
-">
-<table style="border-collapse: collapse; width: 700px; font-family: Arial;">
-        
-        <tr>
-            <th colspan="3" 
-                style="background-color: #d4006e; color: white; padding: 12px; font-size: 18px;">
-                IDENTITAS SEKOLAH
-            </th>
-          <tr>
-          <td colspan="3" style="height: 10px;"></td>
-          </tr>
-
-        </tr>
-          <tr style="height: 40px; background-color: #FDE7EF; border-bottom: 1px solid #C90D50;">
-          <td style="padding: 10px; width: 200px;">Nama Sekolah</td>
-          <td style="padding: 10px; width: 20px;">:</td>
-          <td style="padding: 10px;">SD Negeri Cimapag</td>
-          </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">NPSN</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">20203237</td>
-        </tr>
-        <tr style="height: 40px; background-color: #FDE7EF; border-bottom: 1px solid #C90D50;">
-        <td style="padding: 10px; width: 200px;">Jenjang Pendidikan</td>
-        <td style="padding: 10px; width: 20px;">:</td>
-        <td style="padding: 10px;">Sekolah Dasar (SD)</td>
-        </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Status Sekolah</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">Negeri</td>
-        </tr>
-        <tr style="height: 40px; background-color: #FDE7EF; border-bottom: 1px solid #C90D50;">
-        <td style="padding: 10px; width: 200px;">Alamat</td>
-        <td style="padding: 10px; width: 20px;">:</td>
-        <td style="padding: 10px;">Jln. Cireunghas KP. Nagrog</td>
-        </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">RT/RW</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">03/07</td>
-        </tr>
-        <tr style="height: 40px; background-color: #FDE7EF; border-bottom: 1px solid #C90D50;">
-        <td style="padding: 10px; width: 200px;">Desa</td>
-        <td style="padding: 10px; width: 20px;">:</td>
-        <td style="padding: 10px;">Cireunghas</td>
-        </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Kecamatan</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">Cireunghas</td>
-        </tr>
-        <tr style="height: 40px; background-color: #FDE7EF; border-bottom: 1px solid #C90D50;">
-        <td style="padding: 10px; width: 200px;">Kabupaten</td>
-        <td style="padding: 10px; width: 20px;">:</td>
-        <td style="padding: 10px;">Sukabumi</td>
-        </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Provinsi</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">Jawa Barat</td>
-        </tr>
-        <tr style="height: 40px; background-color: #FDE7EF; border-bottom: 1px solid #C90D50;">
-        <td style="padding: 10px; width: 200px;">Negara</td>
-        <td style="padding: 10px; width: 20px;">:</td>
-        <td style="padding: 10px;">Indonesia</td>
-        </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Posisi Geografis</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">Lintang: -6.948623      Bujur: 107.022673</td>
-        </tr>
-        <tr style="height: 40px; background-color: #FDE7EF; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">SK Pendirian Sekolah</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">90/93/1984</td>
-        </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Tanggal SK Pendirian</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">31 Juli 1984</td>
-        </tr>
-        <tr style="height: 40px; background-color:#FDE7EF ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Status Kepemilikan</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">Pemerintah Daerah</td>
-        </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">SK Izin Operasional</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">594/Psd/1984</td>
-        </tr>
-        <tr style="height: 40px; background-color:#FDE7EF ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Tanggal SK Izin Operasional</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">01 Agustus 1984</td>
-        </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Website</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">-</td>
-        </tr>
-        <tr style="height: 40px; background-color:#FDE7EF ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Email</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">sdncimapag37@gmail.com</td>
-        </tr>
-        <tr style="height: 40px; background-color: ; border-bottom: 1px solid #C90D50;">
-            <td style="padding: 10px; width: 200px;">Telpon</td>
-            <td style="padding: 10px; width: 20px;">:</td>
-            <td style="padding: 10px;">-</td>
-        </tr>
-        
-
-    </table>
-</div>
-</div>
-
+  <!-- FOOTER -->
 <footer class="custom-footer">
 
   <div class="footer-container">
@@ -303,6 +225,7 @@
   
 </body>
 </html>
+
 
 
 
