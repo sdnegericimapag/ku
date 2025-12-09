@@ -12,21 +12,24 @@
   <link rel="stylesheet" href="css/style.css">
   
   <style>
-    .image-text {
-      display: flex;
-      align-items: flex-start;   /* teks sejajar atas */
-      gap: 1rem;
-    }
+    .container-gambar-teks {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+}
 
-    .image-text img {
-      width: 150px;      
-      max-width: 100%;   
-      height: auto;
-    }
+/* Ukuran gambar bisa kamu ubah sesuka hati */
+.container-gambar-teks .gambar-kecil {
+    width: 120px;      /* Ubah sesuai keinginan: 100px, 150px, dll */
+    height: auto;
+    border-radius: 5px;
+}
 
-    .image-text .text {
-      flex: 1;
-    }
+.teks-kanan {
+    flex: 1;
+}
+
 
   </style>
 </head>
@@ -85,8 +88,10 @@
 <div class="container">
   <h1>🌟 Kegiatan Festival Tunas Bahas Ibu Tingkat Kabupaten Sukabumi tahun 2025</h1>
   <h3 style="font-size: 13px; font-weight: normal;">18 September 2025</h3>
-      <img src="poto/rindu.jpeg" alt="poto 1">
-  <h3 style="font-size: 13px;">Cabang Lomba Maca Nulis Aksara Sunda”</h3>
+      <div class="container-gambar-teks">
+      <img src="poto/rindu.jpeg" alt="poto 1" class="gambar-kecil">
+    <div class="teks-kanan">
+        <h3 style="font-size: 13px; font-weight: normal;">Cabang Lomba Maca Nulis Aksara Sunda</h3>
   <p> Juara bukan hanya tentang piala, tapi tentang semangat, kerja keras, dan keberanian untuk tampil. T
     erima kasih atas perjuangan terbaik dari siswa-siswi SD Negeri Cimapag di Ajang Lomba 
     Festival Tunas Bahasa Ibu (FTBI) tingkat kabupaten! Kalian luar biasa.</p>
@@ -94,7 +99,7 @@
     yang telah mewakili sekolah dalam lomba tingkat kabupaten. Meskipun belum meraih juara, semangat dan dedikasi 
     kalian adalah kebanggaan kami. Teruslah belajar, berusaha, dan percaya bahwa setiap pengalaman adalah langkah 
     menuju kesuksesan.</p>
-  
+    </div>
 </div>
   <div class="container">
   <h1>🎯 MISI SD NEGERI CIMAPAG</h1>
@@ -208,5 +213,6 @@
   
 </body>
 </html>
+
 
 
