@@ -501,7 +501,7 @@ p {
     gap: 50px;
     max-width: 1200px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 /* ================================
@@ -751,6 +751,7 @@ p {
     height: 60px;
   }
 }
+
 
 
 
